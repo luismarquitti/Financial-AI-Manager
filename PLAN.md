@@ -1,77 +1,41 @@
-### **High-Level Plan: From React App to Full-Stack Monorepo**
+### **Project Plan & Status**
 
-Our goal is to create a monorepo structure using Yarn Workspaces. This will house our backend (`server`) and frontend (`client`) in a single repository, making development and dependency management streamlined.
+#### **Phase 1: Project Setup & Backend Foundation**
+**Status: ✅ COMPLETE**
 
-1.  **Project Restructuring (Monorepo)**: We will organize the project into two main packages:
-    *   `packages/client`: Our existing React application.
-    *   `packages/server`: The new backend service.
+-   [x] **Directory Structure**: Created a Yarn Workspace monorepo with `packages/client` and `packages/server`.
+-   [x] **Database Setup (PostgreSQL)**: Added a `docker-compose.yml` for a local Postgres instance, defined the schema, and created a seeding script.
+-   [x] **Backend API (GraphQL & Apollo Server)**: Initialized the Node/Express/TypeScript server with a basic Apollo Server setup and a health-check endpoint.
+-   [x] **Tooling**: Configured root-level scripts to run the entire stack concurrently.
 
-2.  **Backend Development (`server`)**: We'll build a Node.js/Express server that:
-    *   Connects securely to a PostgreSQL database.
-    *   Exposes a GraphQL API using Apollo Server for all data operations.
-    *   Handles all interactions with the Google Gemini API, keeping the `API_KEY` secure on the server.
+#### **Phase 2: Backend API Implementation & Frontend Migration**
+**Status: ✅ COMPLETE**
 
-3.  **Frontend Refactoring (`client`)**: We will update the React app to:
-    *   Remove the mock API service (`apiService.ts`).
-    *   Use Apollo Client to communicate with our new GraphQL backend for all data (transactions, categories, etc.).
-    *   Request AI analysis from our backend instead of calling the Gemini API directly.
-
-4.  **Local Development Environment**: We'll set up a seamless local development experience using:
-    *   `docker-compose` to run a PostgreSQL database instance easily.
-    *   A `.env` file to manage environment variables like database connection strings and API keys.
-    *   `concurrently` to run both the client and server with a single command.
+-   [x] **Build out GraphQL API**: Expanded the GraphQL schema with all necessary types, queries, and mutations for transactions, accounts, and categories.
+-   [x] **Implement Resolvers**: Implemented the resolver functions to perform CRUD operations against the PostgreSQL database.
+-   [x] **Secure Gemini Integration**: Moved the Gemini API logic to a dedicated resolver on the server, ensuring the API key remains secure.
+-   [x] **Integrate Apollo Client**: Added `@apollo/client` to the `client` package and configured the `ApolloProvider`.
+-   [x] **Refactor Frontend Data Fetching**: Replaced all functions in `services/apiService.ts` and `services/geminiService.ts` with GraphQL operations using Apollo Client hooks (`useQuery`, `useMutation`).
+-   [x] **Service Cleanup**: Removed the now-redundant mock service files (`apiService.ts`, `geminiService.ts`) from the client.
 
 ---
 
-### **Detailed Implementation Strategy**
+### **🌟 Future Enhancements (Next Steps)**
 
-#### **Phase 1: Project Setup & Backend Foundation**
+With the core full-stack architecture now in place, the application is ready for powerful new features. The following enhancements are recommended:
 
-1.  **Directory Structure**:
-    *   Create a root `package.json` configured for Yarn Workspaces.
-    *   Move the current React application into a `packages/client` directory.
-    *   Create a new `packages/server` directory and initialize a TypeScript Node.js project inside it.
+1.  **AI-Powered Transaction Categorization**:
+    *   **Goal**: Automate the tedious process of categorizing imported transactions.
+    *   **Implementation Idea**: Add an "AI-Categorize" button on the Import page. This would trigger a GraphQL mutation that sends transaction descriptions to the backend. The backend would then use the Gemini API to suggest the most likely category for each transaction based on its description and the user's existing category list. The frontend would then display these suggestions for user confirmation.
 
-2.  **Database Setup (PostgreSQL)**:
-    *   **Docker**: I'll provide a `docker-compose.yml` file. Running `docker-compose up` will start a local PostgreSQL server with a persistent volume for your data.
-    *   **Schema**: We will define the SQL schema for our tables: `transactions`, `categories`, and `accounts`. I'll also create a seeding script to populate the database with the initial data from your `transactions.json`.
-    *   **Connection**: The server will use the `pg` library to connect to the database, with credentials managed via the `.env` file.
+2.  **User Authentication**:
+    *   **Goal**: Secure the application and provide a personalized experience for multiple users.
+    *   **Implementation Idea**: Implement a JWT (JSON Web Token) based authentication system. This would involve adding `User` tables to the database, creating `signup` and `login` mutations in the GraphQL API, and managing the user's authentication state on the client. All API requests would then be protected, ensuring users can only access their own financial data.
 
-3.  **Backend API (GraphQL & Apollo Server)**:
-    *   **Structure**: The `packages/server/src` directory will be organized with clear separation of concerns:
-        *   `db/`: For database connection logic and seeding.
-        *   `graphql/`: To define our GraphQL schema (`typeDefs`) and implement the business logic for each query/mutation (`resolvers`).
-        *   `index.ts`: The server entry point, setting up Express and Apollo Server.
-    *   **Schema Definition**: We will define GraphQL types and operations:
-        *   **Types**: `Transaction`, `Category`, `Account`, `AISummary`.
-        *   **Queries**: `transactions`, `categories`, `accounts`, `getAiSummary`.
-        *   **Mutations**: `addTransaction`, `updateTransaction`, `deleteTransaction`, `addCategory`, etc.
-    *   **Secure Gemini Integration**: The `getAiSummary` resolver on the server will be the *only* place that communicates with the Google Gemini API. It will securely read `process.env.API_KEY` from the server's environment, ensuring the key is never exposed to the browser.
+3.  **Real-Time Notifications & Alerts**:
+    *   **Goal**: Proactively inform users about important financial events.
+    *   **Implementation Idea**: Use GraphQL Subscriptions to push real-time updates from the server to the client. This could be used for features like "Large Expense Alerts" or "Upcoming Bill Reminders".
 
-#### **Phase 2: Frontend Migration to Apollo Client**
-
-1.  **Integrate Apollo Client**:
-    *   Add `@apollo/client` and `graphql` as dependencies to the `packages/client` app.
-    *   Wrap the root `App` component with an `ApolloProvider` to make the client available throughout the component tree.
-    *   Configure the client to point to our local GraphQL server endpoint (e.g., `http://localhost:4000/graphql`).
-
-2.  **Refactor Data Fetching**:
-    *   Replace all functions in `services/apiService.ts` with GraphQL operations.
-    *   **Reading Data**: Use the `useQuery` hook from Apollo Client to fetch transactions, categories, and accounts. This provides caching, loading, and error states out-of-the-box.
-    *   **Writing Data**: Use the `useMutation` hook for all create, update, and delete operations. This allows us to easily update the local cache after a mutation succeeds, ensuring the UI reflects the changes instantly.
-
-#### **Phase 3: Tooling & Deployment Readiness**
-
-1.  **Environment Configuration**:
-    *   The `packages/server` directory will contain a `.env.example` file outlining the needed variables (`DATABASE_URL`, `API_KEY`). You will create your own `.env` file based on it.
-
-2.  **Development Scripts**:
-    *   The root `package.json` will have scripts to manage the whole stack:
-        *   `yarn install`: Installs dependencies for both client and server.
-        *   `yarn dev`: Starts the backend server and frontend dev server concurrently.
-        *   `yarn build`: Builds both client and server for production.
-
-3.  **Deployment Plan**:
-    *   **Server**: The server can be deployed as a standard Node.js application to services like Vercel, Heroku, or Google Cloud Run. It will need to be configured with production environment variables.
-    *   **Client**: The client can be deployed as a static website to services like Vercel or Netlify. The build process will generate a highly optimized set of static assets.
-    *   **CORS**: The Express server will be configured with CORS (Cross-Origin Resource Sharing) to accept requests from the deployed frontend URL.
+4.  **Data Persistence for Client-Side State**:
+    *   **Goal**: Improve user experience by remembering filters and UI state between sessions.
+    *   **Implementation Idea**: While the core data is persistent, UI state (like selected filters on the Transactions page) is not. Use a library like `apollo-link-state` or `localStorage` to persist these client-side view preferences.

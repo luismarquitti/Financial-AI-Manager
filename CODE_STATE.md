@@ -1,32 +1,33 @@
-## Application State: v0.1 (Pre-Fullstack)
+## Application State: v0.3 (Fully Integrated Full-Stack App)
 
-This document describes the state of the "Financial AI Manager" application before the transition to a full-stack architecture.
+This document describes the state of the "Financial AI Manager" application after the full integration between the frontend and backend.
 
 ### Architecture
 
-- **Client-Side Only**: The application is a pure single-page application (SPA) running entirely in the browser. There is no backend server.
-- **Framework**: Built with React and TypeScript.
-- **Dependencies**: Uses ES Modules loaded via an `importmap` in `index.html` from `esm.sh`. Key dependencies include `react`, `recharts`, and `@google/genai`.
+- **Full-Stack Monorepo**: The project remains a Yarn Workspaces monorepo (`packages/client`, `packages/server`).
+- **Backend**: The Node.js server now features a complete GraphQL API with comprehensive queries and mutations for managing all application data. The API is fully connected to the PostgreSQL database.
+- **Frontend**: The React client has been refactored to be a consumer of the GraphQL API. It uses Apollo Client for all data fetching and state management related to server data.
+- **Database**: The PostgreSQL database schema is unchanged and serves as the single source of truth for the application.
 
 ### Data Handling
 
-- **In-Memory Mock Database**: All data operations (CRUD for transactions, categories, accounts) are simulated.
-- **`apiService.ts`**: This service acts as a fake API layer. It maintains an in-memory array of transactions, categories, and accounts.
-- **Initial Data Loading**: On the first data fetch, the `apiService` asynchronously loads a static `data/transactions.json` file to populate the mock database.
-- **State Management**: The primary application state is managed within the root `App.tsx` component using React's `useState`, `useMemo`, and `useCallback` hooks.
-- **No Persistence**: All data, including any user additions or modifications, is lost when the browser is refreshed.
+- **GraphQL API as a Single Source of Truth**: The client no longer contains any mock data or services. All data is fetched from the backend via GraphQL operations. The API provides full CRUD capabilities for transactions, categories, and accounts.
+- **Client-Side State Management**: The client now uses `@apollo/client` for all remote data management. This includes caching, loading, and error states, which simplifies component logic significantly. Local UI state is still managed with React hooks (`useState`, `useMemo`).
+- **Data Flow**:
+    1. A React component calls a `useQuery` or `useMutation` hook.
+    2. Apollo Client sends a GraphQL request to the `http://localhost:4000/graphql` endpoint.
+    3. The Apollo Server on the backend receives the request and executes the corresponding resolver.
+    4. The resolver calls a database service function, which runs a SQL query against the PostgreSQL database.
+    5. The data is returned up the chain to the client, where Apollo Client updates its cache and re-renders the component with the new data.
 
 ### AI Integration
 
-- **Direct API Calls**: The frontend makes direct calls to the Google Gemini API from the `services/geminiService.ts`.
-- **API Key**: The Gemini API key is expected to be available as an environment variable (`process.env.API_KEY`) directly in the client-side code, which is insecure and not suitable for production.
+- **Secure & Server-Side**: The Google Gemini API integration is now fully implemented on the backend (`packages/server/src/services/geminiService.ts`). The `aiSummary` GraphQL query triggers this service, ensuring the API key is never exposed to the client. The client simply queries for the `aiSummary` and displays the result.
 
-### Structure
+### Key Changes from v0.2
 
-The project is organized in a flat structure with the following key areas:
-- `components/`: Reusable React components (Dashboard, Tables, Modals, etc.).
-- `pages/`: Top-level components representing application pages (Transactions, Import, Settings).
-- `services/`: Modules responsible for external communication (`apiService.ts`, `geminiService.ts`).
-- `utils/`: Helper functions for data parsing and analysis.
-- `App.tsx`: The main component that manages state and routing.
-- `index.html`: The entry point that sets up the environment and loads the app.
+- The mock services (`apiService.ts`, `geminiService.ts`) in the client have been **deleted**.
+- The GraphQL schema and resolvers in the server have been fully built out.
+- A database service layer has been added to the server to manage SQL queries.
+- The entire client application (`App.tsx` and its children) has been refactored to use Apollo Client hooks (`useQuery`, `useMutation`, `useLazyQuery`).
+- The client now depends on a running backend server for all of its data.

@@ -1,25 +1,16 @@
 {
   "name": "financial-ai-manager",
+  "version": "0.2.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "recharts": "^3.1.2",
-    "@google/genai": "^1.15.0",
-    "@apollo/client": "^3.10.8",
-    "graphql": "^16.9.0",
-    "xlsx": "^0.18.5"
+    "dev": "concurrently \"yarn workspace server dev\" \"yarn workspace client dev\"",
+    "build": "yarn workspace server build && yarn workspace client build",
+    "db:seed": "yarn workspace server db:seed"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "concurrently": "^8.2.2"
   }
 }
