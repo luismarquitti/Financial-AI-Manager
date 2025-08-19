@@ -3,16 +3,16 @@ import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import type { FinancialAnalysis, AiSummary, Transaction } from './types';
 import { DataInput } from './components/DataInput';
 import { Dashboard } from './components/Dashboard';
-import { TransactionsPage } from './pages/TransactionsPage';
-import { ImportPage } from './pages/ImportPage';
-import { SettingsPage } from './pages/SettingsPage';
-import { TransactionModal } from './components/TransactionModal';
-import { parseFile } from './utils/fileParser';
+import { TransactionsPage } from '../../pages/TransactionsPage';
+import { ImportPage } from '../../pages/ImportPage';
+import { SettingsPage } from '../../pages/SettingsPage';
+import { TransactionModal } from '../../components/TransactionModal';
+import { parseFile } from '../../utils/fileParser';
 import { analyzeTransactions } from './utils/dataAnalyzer';
 import { getFinancialSummary } from './services/geminiService';
-import * as api from './services/apiService';
-import { DatabaseIcon, HeaderIcon, ImportIcon, SettingsIcon } from './components/Icons';
-import { clearAllCache } from './utils/cache';
+import * as api from '../../services/apiService';
+import { DatabaseIcon, HeaderIcon, ImportIcon, SettingsIcon } from '../../components/Icons';
+import { clearAllCache } from '../../utils/cache';
 
 type Page = 'input' | 'dashboard' | 'transactions' | 'import' | 'settings';
 
