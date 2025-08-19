@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.5.0 - Feature: AI Categorization Backend
+*Date: 2024-07-29*
+
+### Added
+- **GraphQL `suggestCategories` Mutation**: Implemented a new mutation in the GraphQL schema to handle requests for AI-powered transaction category suggestions.
+- **New Gemini Service Function**: Added the `suggestTransactionCategories` function to the server-side `geminiService`. This function takes transaction descriptions, queries the Gemini API with a specific prompt and a strict JSON response schema, and returns category suggestions.
+- **New Resolver Logic**: Added the corresponding resolver to orchestrate fetching existing categories and calling the Gemini service to fulfill the `suggestCategories` mutation.
+
+---
+
 ## v0.4.2 - Local Development Documentation Enhancement
 *Date: 2024-07-28*
 

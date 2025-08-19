@@ -1,6 +1,5 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
-import process from 'process';
 
 dotenv.config();
 
@@ -14,7 +13,7 @@ pool.on('connect', () => {
 
 pool.on('error', (err) => {
     console.error('Unexpected error on idle client', err);
-    process.exit(-1);
+    (process as any).exit(-1);
 });
 
 export default {

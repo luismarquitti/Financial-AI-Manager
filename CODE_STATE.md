@@ -1,12 +1,14 @@
-## Application State: v0.4.2 (Local Dev Docs Enhancement)
+## Application State: v0.5.0 (AI Categorization Backend)
 
-This document describes the state of the "Financial AI Manager" application after significantly improving the local development setup and documentation.
+This document describes the state of the "Financial AI Manager" application after implementing the backend infrastructure for the AI-powered transaction categorization feature.
 
 ### Architecture
 
-- **Full-Stack Monorepo**: The project remains a Yarn Workspaces monorepo (`packages/client`, `packages/server`). The core application architecture is unchanged.
+-   **Full-Stack Monorepo**: The project remains a Yarn Workspaces monorepo. The core application architecture is unchanged.
 
-### Key Changes from v0.4.1
+### Key Changes from v0.4.2
 
--   **`docker-compose.yml`**: A new `docker-compose.yml` file has been added to the project root. It defines a PostgreSQL service with a persistent named volume, ensuring a consistent and stable database environment for all developers.
--   **`docs/README.md`**: The technical documentation has been substantially updated. The "Local Development Setup" section now provides a much more detailed, step-by-step guide that is friendly to new contributors, especially those on Windows. It includes instructions for installing and verifying Docker, and a full explanation of the new `docker-compose.yml` configuration.
+-   **GraphQL API Enhancement**: The backend API has been extended with a new `suggestCategories` mutation. This endpoint is designed to receive a list of uncategorized transactions and return AI-generated category suggestions.
+-   **New Gemini Service Functionality**: A new function, `suggestTransactionCategories`, has been added to the server-side `geminiService`. It constructs a precise prompt and uses a strict JSON response schema to ensure reliable categorization suggestions from the Gemini API. This keeps all AI logic and the API key securely on the server.
+-   **Resolver Implementation**: A new resolver connects the `suggestCategories` mutation to the database service (to fetch available categories) and the Gemini service, orchestrating the entire suggestion workflow.
+-   **Frontend Readiness**: The backend is now fully prepared to support the upcoming frontend implementation of the AI categorization feature on the "Import" page.

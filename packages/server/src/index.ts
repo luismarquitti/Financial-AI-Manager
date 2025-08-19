@@ -1,6 +1,6 @@
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
-import express, { json } from 'express';
+import express from 'express';
 import http from 'http';
 import cors from 'cors';
 import { typeDefs } from './graphql/schema';
@@ -23,9 +23,9 @@ const startServer = async () => {
 
     app.use(
         '/graphql',
-        cors<cors.CorsRequest>(),
-        json(),
-        expressMiddleware(server)
+        cors(),
+        express.json(),
+        expressMiddleware(server) as any
     );
 
     await new Promise<void>((resolve) => httpServer.listen({ port: 4000 }, resolve));

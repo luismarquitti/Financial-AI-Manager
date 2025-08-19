@@ -44,6 +44,17 @@ export const typeDefs = `#graphql
     accountId: ID
   }
 
+  input SuggestTransactionCategoryInput {
+    id: String!
+    description: String!
+  }
+
+  type SuggestedCategory {
+    transactionId: String!
+    categoryId: ID!
+    categoryName: String!
+  }
+
   type Query {
     accounts: [Account!]!
     categories: [Category!]!
@@ -65,5 +76,7 @@ export const typeDefs = `#graphql
     deleteTransaction(id: ID!): Boolean!
     
     saveTransactions(transactions: [AddTransactionInput!]!): [Transaction!]!
+
+    suggestCategories(transactions: [SuggestTransactionCategoryInput!]!): [SuggestedCategory!]!
   }
 `;

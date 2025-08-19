@@ -1,6 +1,6 @@
 import { GraphQLScalarType, Kind } from 'graphql';
 import * as dbService from '../services/dbService';
-import { getFinancialSummary } from '../services/geminiService';
+import { getFinancialSummary, suggestTransactionCategories } from '../services/geminiService';
 
 const dateScalar = new GraphQLScalarType({
   name: 'Date',
@@ -60,6 +60,38 @@ export const resolvers = {
             saved.push(await dbService.createTransaction(tx));
         }
         return saved;
+    },
+
+    suggestCategories: async (_: any, { transactions }: { transactions: { id: string; description: string }[] }) => {
+        if (!transactions || transactions.length === 0) {
+            return [];
+        }
+
+        const allCategories = await dbService.getCategories();
+        if (allCategories.length === 0) {
+            return [];
+        }
+
+        const suggestions = await suggestTransactionCategories(transactions, allCategories);
+        
+        const categoryMap = new Map<string, { id: string; name: string }>();
+        allCategories.forEach(cat => categoryMap.set(cat.name, cat));
+
+        const result = suggestions
+            .map(suggestion => {
+                const category = categoryMap.get(suggestion.categoryName);
+                if (category) {
+                    return {
+                        transactionId: suggestion.transactionId,
+                        categoryId: category.id,
+                        categoryName: category.name,
+                    };
+                }
+                return null;
+            })
+            .filter((item): item is NonNullable<typeof item> => item !== null);
+
+        return result;
     }
   }
 };
