@@ -2,10 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
-// Use Node.js globals __filename and __dirname directly
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 interface RawTransaction {
     Date: string;
@@ -28,7 +30,7 @@ const seed = async () => {
         console.log('Schema created successfully.');
 
         // Read transaction data
-    const dataPath = path.join(__dirname, '../../../../data/transactions.json');
+        const dataPath = path.join(__dirname, '../../../client/public/data/transactions.json');
         const transactionsData = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as RawTransaction[];
         
         // Extract unique accounts and categories
