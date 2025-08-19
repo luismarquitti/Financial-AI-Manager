@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.4.2 - Local Development Documentation Enhancement
+*Date: 2024-07-28*
+
+### Added
+- **Docker Compose**: Added a `docker-compose.yml` file to the project root to provide a consistent and persistent PostgreSQL database for local development.
+
+### Changed
+- **Technical Documentation**: Substantially updated `docs/README.md` with a more detailed and user-friendly "Local Development Setup" section. It now includes step-by-step instructions for installing and verifying Docker on Windows and a full explanation of the new Docker Compose configuration.
+
+---
+
+## v0.4.1 - GCP Cost Documentation
+*Date: 2024-07-27*
+
+### Changed
+- **GCP Deployment Guide**: Enhanced `docs/DEPLOYMENT_GUIDE_GCP.md` with a new section detailing the estimated costs, pricing models, and free tier limits for all Google Cloud services used in the deployment.
+
+---
+
 ## v0.4.0 - Documentation & Deployment Readiness
 *Date: 2024-07-27*
 

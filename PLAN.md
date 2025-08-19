@@ -23,6 +23,8 @@
 -   [x] **Dockerfile**: Created a multi-stage `Dockerfile` for containerizing the backend service.
 -   [x] **Technical Documentation**: Added `docs/README.md` with a detailed overview of the project architecture and local setup instructions.
 -   [x] **Deployment Guide**: Added `docs/DEPLOYMENT_GUIDE_GCP.md` with comprehensive steps for deploying the entire application stack to Google Cloud Platform.
+-   [x] **Cost Estimation**: Enhanced the GCP deployment guide with a detailed cost breakdown and free tier analysis for all required services.
+-   [x] **Enhanced Local Dev Docs**: Improved the local development setup guide with detailed Docker instructions for Windows and a robust `docker-compose.yml`.
 
 ---
 

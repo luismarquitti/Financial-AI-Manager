@@ -40,9 +40,27 @@ Follow these steps to get the application running on your local machine.
 
 -   Node.js (v18 or later)
 -   Yarn (v1 or later)
--   Docker and Docker Compose
+-   Docker Desktop
 
-### Step-by-Step Guide
+### Step 1: Install & Verify Docker (for Windows)
+
+The local database runs inside a Docker container, so you need Docker Desktop installed and running.
+
+1.  **Download and Install**: Download Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop/). The installer will guide you through the process. It will likely require you to enable the WSL 2 (Windows Subsystem for Linux) feature, which is a standard part of modern Windows systems.
+2.  **Start Docker Desktop**: Once installed, launch the Docker Desktop application. You should see the Docker icon in your system tray. Wait for it to show a steady green light, indicating it's running.
+3.  **Verify Installation**: Open a terminal (PowerShell or Command Prompt) and run the following commands to ensure Docker is working correctly:
+    ```bash
+    # Check the Docker Engine version
+    docker --version
+
+    # Check the Docker Compose version
+    docker compose version
+    ```
+    You should see version numbers printed for both commands.
+
+> **Note on `docker compose`**: Modern versions of Docker integrate `compose` as a direct command (`docker compose`). Older versions used a hyphenated command (`docker-compose`). This guide uses the modern syntax. If you have an older version, simply add a hyphen to the command.
+
+### Step 2: Clone & Install Dependencies
 
 1.  **Clone the Repository**:
     ```bash
@@ -51,44 +69,77 @@ Follow these steps to get the application running on your local machine.
     ```
 
 2.  **Install Dependencies**:
-    Install all dependencies for both the client and server from the root directory.
+    From the root directory, install all dependencies for both the client and server.
     ```bash
     yarn install
     ```
 
-3.  **Configure Environment Variables**:
-    Create a `.env` file in the `packages/server` directory by copying the example file.
-    ```bash
-    cp packages/server/.env.example packages/server/.env
-    ```
-    Now, edit `packages/server/.env` and fill in your details:
-    ```env
-    # URL for the PostgreSQL database
-    DATABASE_URL="postgresql://user:password@localhost:5432/financial_app"
+### Step 3: Configure Environment Variables
 
-    # Your Google Gemini API Key
-    API_KEY="YOUR_GEMINI_API_KEY"
-    ```
+Create a `.env` file in the `packages/server` directory by copying the example file.
+```bash
+cp packages/server/.env.example packages/server/.env
+```
+Now, edit `packages/server/.env` and fill in your details. The `DATABASE_URL` is already configured for the local Docker setup.
+```env
+# URL for the PostgreSQL database (matches docker-compose.yml)
+DATABASE_URL="postgresql://user:password@localhost:5432/financial_app"
 
-4.  **Start the Database**:
-    Launch the PostgreSQL container using Docker Compose.
-    ```bash
-    docker-compose up -d
-    ```
+# Your Google Gemini API Key
+API_KEY="YOUR_GEMINI_API_KEY"
+```
 
-5.  **Seed the Database**:
-    Run the seed script to create the necessary tables and populate them with sample data.
-    ```bash
-    yarn db:seed
-    ```
+### Step 4: Start the Database with Docker Compose
 
-6.  **Run the Application**:
-    Start both the backend server and the frontend client concurrently.
-    ```bash
-    yarn dev
-    ```
-    -   The backend GraphQL server will be available at `http://localhost:4000/graphql`.
-    -   The frontend React application will be available at `http://localhost:5173`.
+This command reads the `docker-compose.yml` file at the project root and starts the PostgreSQL database container in the background.
+
+```bash
+docker compose up -d
+```
+The first time you run this, it will download the PostgreSQL image, which may take a few moments.
+
+#### Understanding the `docker-compose.yml` File
+This file defines the local database service, ensuring a consistent setup.
+```yaml
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: financial_app
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data: {}
+```
+-   **`image`**: Specifies the official lightweight PostgreSQL version 14 image.
+-   **`restart: always`**: Ensures the database container automatically restarts if it crashes or if you restart your machine.
+-   **`environment`**: Sets the username, password, and database name. These values match the `DATABASE_URL` in the `.env` file.
+-   **`ports`**: Maps port `5432` inside the container to port `5432` on your local machine, allowing the backend server to connect.
+-   **`volumes`**: Creates a persistent, named volume (`postgres_data`). This is crucial as it stores your database data outside the container, **preventing data loss** when you stop or rebuild the container.
+
+### Step 5: Seed the Database
+
+Run the seed script to create the necessary tables and populate them with sample data.
+```bash
+yarn db:seed
+```
+
+### Step 6: Run the Application
+
+Start both the backend server and the frontend client concurrently.
+```bash
+yarn dev
+```
+-   The backend GraphQL server will be available at `http://localhost:4000/graphql`.
+-   The frontend React application will be available at `http://localhost:5173`.
 
 ---
 

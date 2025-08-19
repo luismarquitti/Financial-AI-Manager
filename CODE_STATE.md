@@ -1,22 +1,12 @@
-## Application State: v0.4 (Documentation & Deployment Ready)
+## Application State: v0.4.2 (Local Dev Docs Enhancement)
 
-This document describes the state of the "Financial AI Manager" application after the addition of comprehensive documentation and deployment artifacts.
+This document describes the state of the "Financial AI Manager" application after significantly improving the local development setup and documentation.
 
 ### Architecture
 
-- **Full-Stack Monorepo**: The project remains a Yarn Workspaces monorepo (`packages/client`, `packages/server`). The core application architecture is unchanged from v0.3.
+- **Full-Stack Monorepo**: The project remains a Yarn Workspaces monorepo (`packages/client`, `packages/server`). The core application architecture is unchanged.
 
-### Data Handling
+### Key Changes from v0.4.1
 
-- **GraphQL API as a Single Source of Truth**: Data handling logic remains the same, with the client consuming the backend GraphQL API.
-
-### AI Integration
-
-- **Secure & Server-Side**: The Gemini API integration remains securely on the backend.
-
-### Key Changes from v0.3
-
-- **`docs` Directory**: A new top-level `docs` directory has been created to house all project documentation.
-    -   `docs/README.md`: Contains a technical deep-dive into the application's architecture, components, and local setup guide.
-    -   `docs/DEPLOYMENT_GUIDE_GCP.md`: Provides a complete, step-by-step guide for deploying the database, backend, and frontend to Google Cloud Platform.
-- **`Dockerfile`**: A multi-stage `Dockerfile` has been added to `packages/server`. This file enables the containerization of the backend Node.js application, making it ready for deployment on services like Google Cloud Run.
+-   **`docker-compose.yml`**: A new `docker-compose.yml` file has been added to the project root. It defines a PostgreSQL service with a persistent named volume, ensuring a consistent and stable database environment for all developers.
+-   **`docs/README.md`**: The technical documentation has been substantially updated. The "Local Development Setup" section now provides a much more detailed, step-by-step guide that is friendly to new contributors, especially those on Windows. It includes instructions for installing and verifying Docker, and a full explanation of the new `docker-compose.yml` configuration.

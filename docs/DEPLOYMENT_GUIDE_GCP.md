@@ -156,3 +156,29 @@ We will host the static React frontend on Cloud Storage.
     ```
 
 Your application is now live! You can access it via `https://storage.googleapis.com/your-unique-bucket-name/index.html`. For a production setup, you would add a **Cloud Load Balancer** in front of the bucket to provide a custom domain and HTTPS.
+
+---
+
+## Part 4: Cost Estimation & Free Tier
+
+Deploying this application can be very cost-effective and potentially free for low-traffic personal use, thanks to GCP's "Always Free" tier. Below is a summary of the costs associated with the services used.
+
+> **Note**: Prices are based on the `us-central1` region and are subject to change.
+
+| Service             | Free Tier Limit (per month)                                                                                                    | Pricing Model (Beyond Free Tier)                                                              |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| **Cloud SQL**       | 1 `db-f1-micro` instance, 20 GB SSD storage, 20 GB automated backups. (Not available for Postgres, only MySQL/SQL Server)        | Billed per vCPU-hour, GiB-hour of RAM, GiB-month of storage, and network egress.               |
+| **Cloud Run**       | 2 million requests, 360,000 vCPU-seconds, 180,000 GiB-seconds of memory, 1 GiB network egress within North America.               | Billed per vCPU-second, GiB-second of memory, request count, and network egress.              |
+| **Artifact Registry** | 0.5 GB of storage.                                                                                                             | Billed per GiB-month of storage and network egress.                                           |
+| **Secret Manager**  | 6 secret versions, 10,000 access operations.                                                                                   | Billed per active secret version and per 10,000 access operations.                            |
+| **Cloud Storage**   | 5 GB-month of Standard Storage, 5,000 Class A operations, 50,000 Class B operations, 1 GB network egress from North America.      | Billed per GiB-month of storage, per 10,000 operations, and per GiB of network egress.        |
+| **Gemini API**      | Varies by model. `gemini-2.5-flash` offers a free tier for a limited number of requests per minute.                             | Billed per 1,000 characters or per image, depending on the input.                           |
+
+### Example Cost Scenario (Low Traffic)
+
+For a personal project with light usage that stays within the monthly free tier limits for Cloud Run, Artifact Registry, Secret Manager, Cloud Storage, and the Gemini API, **your primary cost will be the Cloud SQL instance**.
+
+-   A small Cloud SQL instance (e.g., `db-g1-small` with 1 vCPU, 1.7 GB RAM) running 24/7 could cost approximately **$25-35 per month**.
+-   **To minimize costs**, you can stop your Cloud SQL instance when you are not actively using the application.
+
+For a precise estimate based on your expected usage, use the official [**Google Cloud Pricing Calculator**](https://cloud.google.com/products/calculator).
