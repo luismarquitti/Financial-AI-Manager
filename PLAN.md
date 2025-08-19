@@ -18,6 +18,12 @@
 -   [x] **Refactor Frontend Data Fetching**: Replaced all functions in `services/apiService.ts` and `services/geminiService.ts` with GraphQL operations using Apollo Client hooks (`useQuery`, `useMutation`).
 -   [x] **Service Cleanup**: Removed the now-redundant mock service files (`apiService.ts`, `geminiService.ts`) from the client.
 
+#### **Phase 3: Documentation & Deployment**
+**Status: ✅ COMPLETE**
+-   [x] **Dockerfile**: Created a multi-stage `Dockerfile` for containerizing the backend service.
+-   [x] **Technical Documentation**: Added `docs/README.md` with a detailed overview of the project architecture and local setup instructions.
+-   [x] **Deployment Guide**: Added `docs/DEPLOYMENT_GUIDE_GCP.md` with comprehensive steps for deploying the entire application stack to Google Cloud Platform.
+
 ---
 
 ### **🌟 Future Enhancements (Next Steps)**

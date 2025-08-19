@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.4.0 - Documentation & Deployment Readiness
+*Date: 2024-07-27*
+
+### Added
+- **Documentation Hub**: Created a new `docs/` directory to centralize project documentation.
+- **Technical Documentation**: Added a detailed `docs/README.md` file covering the application's architecture, local development setup, and API usage.
+- **GCP Deployment Guide**: Created a comprehensive `docs/DEPLOYMENT_GUIDE_GCP.md` with step-by-step instructions for deploying the entire stack (PostgreSQL, Node.js API, React Frontend) to Google Cloud Platform.
+- **Server Dockerfile**: Added a multi-stage `Dockerfile` to `packages/server` to containerize the backend service for production deployment.
+
+---
+
 ## v0.3.0 - Full API Implementation & Frontend Integration
 *Date: 2024-07-26*
 
