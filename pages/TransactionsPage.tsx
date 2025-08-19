@@ -1,0 +1,153 @@
+import React, { useState, useMemo } from 'react';
+import type { Transaction } from '../types';
+import { TransactionTable } from '../components/TransactionTable';
+
+interface TransactionsPageProps {
+  transactions: Transaction[];
+  onAdd: () => void;
+  onEdit: (transaction: Transaction) => void;
+  onDelete: (transactionId: string) => void;
+  categories: string[];
+  accounts: string[];
+}
+
+export const TransactionsPage: React.FC<TransactionsPageProps> = ({ transactions, onAdd, onEdit, onDelete, categories }) => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [categoryFilter, setCategoryFilter] = useState('All');
+    const [typeFilter, setTypeFilter] = useState('All'); // All, Income, Expense
+    const [dateRange, setDateRange] = useState<{ start: string, end: string }>({ start: '', end: '' });
+
+    const uniqueCategories = useMemo(() => ['All', ...categories], [categories]);
+
+    const filteredTransactions = useMemo(() => {
+        return transactions.filter(t => {
+            const transactionDate = t.date;
+            
+            // Add T00:00:00 to parse date as local, preventing timezone issues.
+            const startDate = dateRange.start ? new Date(dateRange.start + 'T00:00:00') : null;
+            const endDate = dateRange.end ? new Date(dateRange.end + 'T00:00:00') : null;
+            
+            if (startDate && transactionDate < startDate) return false;
+            if (endDate) {
+                // Include the whole end day
+                const endOfDay = new Date(endDate);
+                endOfDay.setHours(23, 59, 59, 999);
+                if(transactionDate > endOfDay) return false;
+            }
+
+            if (typeFilter === 'Income' && t.amount < 0) return false;
+            if (typeFilter === 'Expense' && t.amount >= 0) return false;
+
+            if (categoryFilter !== 'All' && t.category !== categoryFilter) return false;
+
+            if (searchTerm && !t.description.toLowerCase().includes(searchTerm.toLowerCase())) return false;
+
+            return true;
+        });
+    }, [transactions, searchTerm, categoryFilter, typeFilter, dateRange]);
+
+    const filteredSummary = useMemo(() => {
+        return filteredTransactions.reduce((acc, t) => {
+            if (t.amount > 0) {
+                acc.income += t.amount;
+            } else {
+                acc.expenses += t.amount;
+            }
+            return acc;
+        }, { income: 0, expenses: 0 });
+    }, [filteredTransactions]);
+
+    const formatCurrency = (value: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+
+    const resetFilters = () => {
+        setSearchTerm('');
+        setCategoryFilter('All');
+        setTypeFilter('All');
+        setDateRange({ start: '', end: '' });
+    };
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-800">
+            Transactions
+          </h2>
+          <p className="text-text-secondary mt-1">
+            Manage and review all your financial transactions.
+          </p>
+        </div>
+        <button
+            onClick={onAdd}
+            className="px-5 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+        >
+            Add Transaction
+        </button>
+      </div>
+
+      {/* Filters Section */}
+      <div className="bg-white shadow-md rounded-xl p-4 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {/* Search */}
+            <div className="lg:col-span-2">
+                <label htmlFor="search" className="block text-sm font-medium text-gray-700">Search Description</label>
+                <input type="text" id="search" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder="e.g., Coffee shop..." className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
+            </div>
+
+            {/* Type Filter */}
+            <div>
+                <label htmlFor="type-filter" className="block text-sm font-medium text-gray-700">Type</label>
+                <select id="type-filter" value={typeFilter} onChange={e => setTypeFilter(e.target.value)} className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    <option>All</option>
+                    <option>Income</option>
+                    <option>Expense</option>
+                </select>
+            </div>
+            
+            {/* Category Filter */}
+            <div>
+                <label htmlFor="category-filter" className="block text-sm font-medium text-gray-700">Category</label>
+                <select id="category-filter" value={categoryFilter} onChange={e => setCategoryFilter(e.target.value)} className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    {uniqueCategories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
+                </select>
+            </div>
+
+             <div className="self-end">
+                <button onClick={resetFilters} className="w-full px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Reset Filters</button>
+            </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+             {/* Date Range */}
+            <div>
+                <label htmlFor="start-date" className="block text-sm font-medium text-gray-700">Start Date</label>
+                <input type="date" id="start-date" value={dateRange.start} onChange={e => setDateRange(prev => ({...prev, start: e.target.value}))} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
+            </div>
+            <div>
+                <label htmlFor="end-date" className="block text-sm font-medium text-gray-700">End Date</label>
+                <input type="date" id="end-date" value={dateRange.end} onChange={e => setDateRange(prev => ({...prev, end: e.target.value}))} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
+            </div>
+        </div>
+      </div>
+      
+      {/* Filtered Summary */}
+      <div className="bg-white shadow-md rounded-xl p-4">
+        <h3 className="text-lg font-bold text-gray-800 mb-3">Filtered Summary</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-emerald-50 p-4 rounded-lg border-l-4 border-secondary">
+                <p className="text-sm font-medium text-text-secondary">Total Income</p>
+                <p className="text-2xl font-bold text-secondary">{formatCurrency(filteredSummary.income)}</p>
+            </div>
+            <div className="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                <p className="text-sm font-medium text-text-secondary">Total Expenses</p>
+                <p className="text-2xl font-bold text-danger">{formatCurrency(Math.abs(filteredSummary.expenses))}</p>
+            </div>
+        </div>
+      </div>
+      
+      {/* Transaction Table */}
+      <div className="bg-card shadow-lg rounded-xl p-6">
+        <TransactionTable transactions={filteredTransactions} onEdit={onEdit} onDelete={onDelete} />
+      </div>
+    </div>
+  );
+};

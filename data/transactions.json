@@ -1,0 +1,3341 @@
+[
+  {
+    "Date": "2025-03-05",
+    "Description": "PAY-NOVA",
+    "Amount": -20,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "PAY-INDIG",
+    "Amount": -22,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Escola Montessori de Campinas LTDA",
+    "Amount": -2525,
+    "Category": "Educação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 900,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Luis Paulo Angelini Marquitti",
+    "Amount": -1960,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "PAY-BOOME",
+    "Amount": -67.8,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -366.46,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Companhia de Gas de Sao Paulo Comgas",
+    "Amount": -259,
+    "Category": "Gás",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1346.05,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -1086.15,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -85.37,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-06",
+    "Description": "PAY-RJCCONVENIE",
+    "Amount": -46.6,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-06",
+    "Description": "Cef Matriz",
+    "Amount": 3000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-06",
+    "Description": "IOF",
+    "Amount": -80.65,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-07",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -71.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-10",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -101.66,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-10",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -230.47,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-10",
+    "Description": "PAY-SAVEG",
+    "Amount": -306.71,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-10",
+    "Description": "JUROS LIMITE DA CONTA",
+    "Amount": -980.45,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-10",
+    "Description": "Vivo",
+    "Amount": -79.98,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-11",
+    "Description": "Itau Seguros de Auto e Residencia S.A",
+    "Amount": -57.2,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-12",
+    "Description": "PAY-PADAR",
+    "Amount": -38,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-13",
+    "Description": "PAY-MINI",
+    "Amount": -33.21,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-13",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 1000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-14",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -59.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-14",
+    "Description": "Estado de Sao Paulo",
+    "Amount": -492.56,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-14",
+    "Description": "Wipro Technologies",
+    "Amount": 3200,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-14",
+    "Description": "Banco Bradescard S.A",
+    "Amount": -253.18,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -242.24,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "PAY-COBAS",
+    "Amount": -160.38,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "PAY-RJCCO",
+    "Amount": -9.96,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "Alecan Telecomunicacoes LTDA",
+    "Amount": -54.94,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "Portoseg S.A - Credito Financiamento e Investimento",
+    "Amount": -1172.85,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "ITAU VISA 9806-6894",
+    "Amount": -1255.95,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "PAY-AUTO",
+    "Amount": -239.27,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "PAY-MINI",
+    "Amount": -23.99,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-17",
+    "Description": "PAY-MINI",
+    "Amount": -17.47,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-19",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 3000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-19",
+    "Description": "PAY-MINI",
+    "Amount": -20.48,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-19",
+    "Description": "Companhia Paulista de Forca e Luz",
+    "Amount": -234.94,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-20",
+    "Description": "Luizacred S.A Sociedade de Credito Financiamento e Investimento",
+    "Amount": -14.99,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-21",
+    "Description": "PAY-PADAR",
+    "Amount": -50,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-24",
+    "Description": "Claro",
+    "Amount": -222.19,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-24",
+    "Description": "PAY-RJCCO",
+    "Amount": -40.8,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-24",
+    "Description": "PAY-SAVEG",
+    "Amount": -448.74,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-28",
+    "Description": "Wipro Technologies",
+    "Amount": 2541,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-28",
+    "Description": "PAY-SH FR",
+    "Amount": -28.46,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-31",
+    "Description": "PAY-GELAT",
+    "Amount": -73,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-03-31",
+    "Description": "Beauty Lounge - Paula Espelho",
+    "Amount": -106.7,
+    "Category": "Cuidados pessoais",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-01",
+    "Description": "PAY-SORVE",
+    "Amount": -14.8,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-01",
+    "Description": "PAY-COBAS",
+    "Amount": -88.92,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-01",
+    "Description": "Luis Paulo Angelini Marquitti",
+    "Amount": -1960,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-02",
+    "Description": "Clayton Eduardo Wege",
+    "Amount": -200,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-02",
+    "Description": "IOF",
+    "Amount": -80.12,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-03",
+    "Description": "PAY-RJCCO",
+    "Amount": -40.8,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-03",
+    "Description": "Companhia de Gas de Sao Paulo Comgas",
+    "Amount": -237.48,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-03",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 2000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-04",
+    "Description": "PAY-MINI",
+    "Amount": -4.29,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "PAY-SUPER",
+    "Amount": -30.96,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -366.46,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "Escola Montessori de Campinas LTDA",
+    "Amount": -2525,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -1086.15,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -85.37,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "PAY-MINI",
+    "Amount": -16.78,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1346.05,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "PAY-SORFR",
+    "Amount": -34,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-07",
+    "Description": "Rd Saude",
+    "Amount": -66,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-08",
+    "Description": "Viacao Santa Cruz LTDA",
+    "Amount": -69.33,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-08",
+    "Description": "PAY-PAGUE",
+    "Amount": -65.75,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "Vivo",
+    "Amount": -76,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -101.66,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "PAY-CASA",
+    "Amount": -16,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -230.47,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "PAY-BOOMERANG C-",
+    "Amount": -26.9,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "JUROS LIMITE DA CONTA",
+    "Amount": -1067.29,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "PAY-DROGA",
+    "Amount": -34.9,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-10",
+    "Description": "PAY-RAIA",
+    "Amount": -27.65,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-11",
+    "Description": "Itau Seguros de Auto e Residencia S.A",
+    "Amount": -68.94,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-11",
+    "Description": "PAY-SAVEG",
+    "Amount": -211.8,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-14",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -59.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-14",
+    "Description": "PAY-MINI",
+    "Amount": -22.17,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-14",
+    "Description": "Fabiana Cristina Tsuda",
+    "Amount": -400,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "Portoseg S.A - Credito Financiamento e Investimento",
+    "Amount": -606.61,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "Banco Bradescard S.A",
+    "Amount": -471.81,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "PAY-PAO D",
+    "Amount": -24.5,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "PAY-COBAS",
+    "Amount": -8.82,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "Wipro Technologies",
+    "Amount": 3200,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "ITAU VISA 9806-6894",
+    "Amount": -3143.81,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "CREDIARIO ITAU 230",
+    "Amount": 21000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-15",
+    "Description": "Alecan Telecomunicacoes LTDA",
+    "Amount": -53.75,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-16",
+    "Description": "Estado de Sao Paulo",
+    "Amount": -492.56,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-16",
+    "Description": "PAY-PADAR",
+    "Amount": -28,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-17",
+    "Description": "PAY-CIADO",
+    "Amount": -80,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-17",
+    "Description": "Companhia Paulista de Forca e Luz",
+    "Amount": -178.79,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-17",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -341.17,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "Luis Paulo Angelini Marquitti",
+    "Amount": 1820,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-CACAU",
+    "Amount": -31.44,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-BENI",
+    "Amount": -1881,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-DROGA",
+    "Amount": -17.95,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-MINI",
+    "Amount": -3.99,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-LOJAS",
+    "Amount": -50.97,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "Claro",
+    "Amount": -208.36,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 1000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-PIZZA",
+    "Amount": -37.9,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "Fabiana Cristina Tsuda",
+    "Amount": -200,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-PADAR",
+    "Amount": -17.07,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-22",
+    "Description": "PAY-DAISO",
+    "Amount": -20.98,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-23",
+    "Description": "PAY-ALLPA",
+    "Amount": -15,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-23",
+    "Description": "PAY-RAIA1",
+    "Amount": -83.82,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-25",
+    "Description": "PAY-ALLPA",
+    "Amount": -15,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-25",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -79.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-MINI",
+    "Amount": -4.29,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "Pagar.me Instituicao de Pagamento S.A",
+    "Amount": -113.67,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "Pagar.me Instituicao de Pagamento S.A",
+    "Amount": 113.67,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-MINUT",
+    "Amount": -13.16,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-MINI",
+    "Amount": -53.33,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-SAVEG",
+    "Amount": -95.3,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "Pagar.me Instituicao de Pagamento S.A",
+    "Amount": -60.33,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-RJCCO",
+    "Amount": -5.93,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-MINUT",
+    "Amount": -26.66,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "Cpfl Santa Cruz",
+    "Amount": -37.02,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-CELUL",
+    "Amount": -129.7,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-28",
+    "Description": "PAY-LOJAS",
+    "Amount": -69.95,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-29",
+    "Description": "PAY-MINI",
+    "Amount": -18,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-30",
+    "Description": "Luizacred S.A Sociedade de Credito Financiamento e Investimento",
+    "Amount": -14.99,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-30",
+    "Description": "PAY-OXXO",
+    "Amount": -33.99,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-30",
+    "Description": "Amazon.com.br",
+    "Amount": -118.15,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-30",
+    "Description": "Wipro Technologies",
+    "Amount": 2542,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-04-30",
+    "Description": "Paulo Roberto Marquitti",
+    "Amount": 120,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-02",
+    "Description": "Café Colonial Itupeva",
+    "Amount": -225,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-02",
+    "Description": "PAY-REST",
+    "Amount": -29,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-02",
+    "Description": "PAY-MINI",
+    "Amount": -28.27,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-02",
+    "Description": "PAY-JR CA",
+    "Amount": -7.5,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "PAY-POSTO",
+    "Amount": -17,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "REND PAGO APLIC AUT MAIS",
+    "Amount": 0.01,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "PAY-POSTO",
+    "Amount": -163.48,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "IOF",
+    "Amount": -61.65,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Escola Montessori de Campinas LTDA",
+    "Amount": -2525,
+    "Category": "Educação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Luis Eduardo Angelini Marquitti",
+    "Amount": -20,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1346.05,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -366.46,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -88.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "PAY-ABMPC",
+    "Amount": -8.4,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 2000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "PAY-DROGA",
+    "Amount": -137.35,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "PAY-RAIA",
+    "Amount": -163.03,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "PAY-MADER",
+    "Amount": -173.8,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -1110.48,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -87.36,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-05",
+    "Description": "Luis Paulo Angelini Marquitti",
+    "Amount": -1920,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-06",
+    "Description": "Companhia de Gas de Sao Paulo Comgas",
+    "Amount": -354.39,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-06",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 1000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-07",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -21.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-08",
+    "Description": "Cabeleireiro Luís",
+    "Amount": -110,
+    "Category": "Cuidados pessoais",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-08",
+    "Description": "Bradesco Vida e Previdencia S.A",
+    "Amount": 3117.73,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -101.66,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "PAY-MCBAI",
+    "Amount": -163,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -230.47,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "PAY-SUPER",
+    "Amount": -60.45,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "PAY-FONSE",
+    "Amount": -111.93,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "Manutenção portão Casa SJ",
+    "Amount": -180,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "Vivo",
+    "Amount": -80,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "PAY-COBAS",
+    "Amount": -64.37,
+    "Category": "Pets",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "PAY-PADAR",
+    "Amount": -46.53,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "PAY-RJCCO",
+    "Amount": -10.94,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "Conectcar",
+    "Amount": -5.1,
+    "Category": "Pedágios",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "JUROS LIMITE DA CONTA",
+    "Amount": -312.06,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-12",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 2000,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-13",
+    "Description": "Itau Seguros de Auto e Residencia S.A",
+    "Amount": -19.5,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-13",
+    "Description": "PAY-OXXO",
+    "Amount": -38.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-13",
+    "Description": "Claro",
+    "Amount": -214.3,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-14",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": -200,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-14",
+    "Description": "Odonto Castelo Consultorios Odontologicos LTDA",
+    "Amount": -190,
+    "Category": "Trabalho",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-14",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 550,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-14",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 1351,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-15",
+    "Description": "Wipro Technologies",
+    "Amount": 3200,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-15",
+    "Description": "Banco Bradescard S.A",
+    "Amount": -300.37,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-15",
+    "Description": "Portoseg S.A - Credito Financiamento e Investimento",
+    "Amount": -573.22,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-15",
+    "Description": "Residencial Novo Tempo LTDA",
+    "Amount": 300,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-15",
+    "Description": "ITAU BLACK 6500-1394",
+    "Amount": -2941.05,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-15",
+    "Description": "Alecan Telecomunicacoes LTDA",
+    "Amount": -53.75,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-15",
+    "Description": "Paulo Roberto Marquitti",
+    "Amount": 200,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-16",
+    "Description": "PAY-PADAR",
+    "Amount": -22,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-16",
+    "Description": "PAY-MINI",
+    "Amount": -15.67,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-16",
+    "Description": "Alecia Batista dos Santos",
+    "Amount": -200,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-16",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -731.35,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-16",
+    "Description": "Odonto Castelo Consultorios Odontologicos LTDA",
+    "Amount": -190,
+    "Category": "Trabalho",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-16",
+    "Description": "Estado de Sao Paulo",
+    "Amount": -492.56,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-19",
+    "Description": "PAY-MINI",
+    "Amount": -6.99,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-19",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -188.8,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-19",
+    "Description": "PAY-MARAV",
+    "Amount": -107.96,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-19",
+    "Description": "Companhia Paulista de Forca e Luz",
+    "Amount": -207.16,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-19",
+    "Description": "PAY-MINI",
+    "Amount": -61.99,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-19",
+    "Description": "PAY-QUIOS",
+    "Amount": -20,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-20",
+    "Description": "PAY-MINI EXTRA",
+    "Amount": -13.29,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-21",
+    "Description": "Marcos Antonio de Araujo",
+    "Amount": -100,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-21",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 1600,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-21",
+    "Description": "PAY-MINI",
+    "Amount": -2.99,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-22",
+    "Description": "Wine.com.br",
+    "Amount": -89,
+    "Category": "Bares e restaurantes",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-22",
+    "Description": "PAY-OXXO",
+    "Amount": -36.98,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-23",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -24.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-23",
+    "Description": "PAY-RjcCo",
+    "Amount": -5.95,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-26",
+    "Description": "PAY-MINI",
+    "Amount": -30.28,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-26",
+    "Description": "PAY-Galat",
+    "Amount": -233.2,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-26",
+    "Description": "PAY-DROGA",
+    "Amount": -174.95,
+    "Category": "Saúde",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-26",
+    "Description": "PAY-MINI",
+    "Amount": -15.32,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-27",
+    "Description": "PAY-MINI",
+    "Amount": -31.55,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-29",
+    "Description": "Amazon.com.br",
+    "Amount": -29.74,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-29",
+    "Description": "PAY-REST",
+    "Amount": -29,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-29",
+    "Description": "Einstein Romero Duraes",
+    "Amount": -300,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-30",
+    "Description": "PAY-OXXO",
+    "Amount": -36.98,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-30",
+    "Description": "Alecia Batista dos Santos",
+    "Amount": -200,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-30",
+    "Description": "Wipro Technologies",
+    "Amount": 5861,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-30",
+    "Description": "Almoço Tannur",
+    "Amount": -23.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-30",
+    "Description": "Mini Extra",
+    "Amount": -23.07,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-30",
+    "Description": "Lavagem Carro",
+    "Amount": -50,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-05-30",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -83.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-02",
+    "Description": "PAY KOYAM",
+    "Amount": -68.31,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-02",
+    "Description": "Aluguel Sala Uniodonto",
+    "Amount": -200,
+    "Category": "Trabalho",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-02",
+    "Description": "Luis Paulo Angelini Marquitti",
+    "Amount": -1960,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-02",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -71.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-02",
+    "Description": "PAY Ribei",
+    "Amount": -63.6,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-02",
+    "Description": "PAY COBAS",
+    "Amount": -177.5,
+    "Category": "Pets",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-02",
+    "Description": "PAY CASA",
+    "Amount": -22,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-03",
+    "Description": "IOF",
+    "Amount": -31.83,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-03",
+    "Description": "Uber do Brasil Tecnologia LTDA",
+    "Amount": -29.91,
+    "Category": "Uber",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-03",
+    "Description": "PAY-MINI",
+    "Amount": -26.59,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-04",
+    "Description": "PAY-OXXO",
+    "Amount": -33.99,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -366.46,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Comgás",
+    "Amount": -228.82,
+    "Category": "Gás",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Escola Montessori de Campinas LTDA",
+    "Amount": -2589,
+    "Category": "Educação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -85.37,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 1000,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Americanas S.A - em Recuperacao Judicial",
+    "Amount": -72.21,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -1046.15,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1346.05,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-05",
+    "Description": "PAY MINI",
+    "Amount": -18.19,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-06",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -79.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-06",
+    "Description": "REND PAGO APLIC AUT MAIS",
+    "Amount": 0.01,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-06",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 2500,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "Mini Extra",
+    "Amount": -17.79,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "PAY BIERG",
+    "Amount": -6.61,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "PAY QUEIJ",
+    "Amount": -15.8,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "PAY DROGA",
+    "Amount": -329.56,
+    "Category": "Medicamentos / Farmácia",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "Pão de Açucar",
+    "Amount": -87.97,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "PAY BIERG",
+    "Amount": -50,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "Café Colonial Itupeva",
+    "Amount": -150,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-07",
+    "Description": "PAY DROGA",
+    "Amount": -7.54,
+    "Category": "Medicamentos / Farmácia",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-08",
+    "Description": "PAY MINI",
+    "Amount": -14,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-08",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -80.97,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-10",
+    "Description": "Mini Extra",
+    "Amount": -17.79,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-11",
+    "Description": "IPTU Garagem",
+    "Amount": -101.66,
+    "Category": "IPTU",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-11",
+    "Description": "Vivo",
+    "Amount": -80,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-11",
+    "Description": "IPTU AP",
+    "Amount": -230.47,
+    "Category": "IPTU",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-11",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -79.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-12",
+    "Description": "Cama Lúcia Helena",
+    "Amount": -412,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-13",
+    "Description": "Wipro Technologies",
+    "Amount": 3200,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-13",
+    "Description": "Mini Extra",
+    "Amount": -20.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-13",
+    "Description": "Faxina Alecia",
+    "Amount": -200,
+    "Category": "Faxina",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-13",
+    "Description": "Padaria",
+    "Amount": -13,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-13",
+    "Description": "Banco Bradescard S.A",
+    "Amount": -23.4,
+    "Category": "Faturas Cartão de Crédito",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-14",
+    "Description": "PAY-CTA",
+    "Amount": -92.8,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-14",
+    "Description": "PAY-lolyk",
+    "Amount": -14.9,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-14",
+    "Description": "PAY-PANIF",
+    "Amount": -18.01,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-14",
+    "Description": "PAY-EGLHE",
+    "Amount": -85.77,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-14",
+    "Description": "PAY-EGLHE",
+    "Amount": -23.97,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-16",
+    "Description": "Portoseg S.A - Credito Financiamento e Investimento",
+    "Amount": -778.72,
+    "Category": "Faturas Cartão de Crédito",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-16",
+    "Description": "Pizza",
+    "Amount": -37.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Banhos Freddie",
+    "Amount": -100,
+    "Category": "Pets",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "REND PAGO APLIC AUT MAIS",
+    "Amount": 0.01,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "ITAU BLACK 6500-1394",
+    "Amount": -3466.84,
+    "Category": "Faturas Cartão de Crédito",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Cef Matriz",
+    "Amount": 11255.19,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -512.56,
+    "Category": "Faturas Cartão de Crédito",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Claro",
+    "Amount": -53.74,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Pão de Açúcar Minuto",
+    "Amount": -41.55,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "JUROS LIMITE DA CONTA",
+    "Amount": -72.56,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Claro",
+    "Amount": -209.79,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Paulo Roberto Marquitti",
+    "Amount": 280,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-17",
+    "Description": "Leroy - Espelho e Prateleiras Flores",
+    "Amount": -143.14,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "APLICACAO CDB COFRINHOS",
+    "Amount": -5000,
+    "Category": "Investimentos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "Mini Extra",
+    "Amount": -36.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "Estacionamento",
+    "Amount": -7,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "Companhia Paulista de Forca e Luz",
+    "Amount": -215.5,
+    "Category": "Energia",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "Cabeleireiro Luís",
+    "Amount": -99,
+    "Category": "Cuidados pessoais",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "PAY CAFE",
+    "Amount": -5,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "Decathlon",
+    "Amount": -229.97,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "Itau Seguros de Auto e Residencia S.A",
+    "Amount": -4.68,
+    "Category": "Casa",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-18",
+    "Description": "Bicicleta Lúcia Helena",
+    "Amount": -379.98,
+    "Category": "Família e filhos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-19",
+    "Description": "Mini Extra",
+    "Amount": -28.56,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-20",
+    "Description": "Sorvete Rochinha",
+    "Amount": -52.98,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-20",
+    "Description": "Cubo mágico 4x4",
+    "Amount": -32,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-20",
+    "Description": "Cheirin Bão",
+    "Amount": -19.9,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-20",
+    "Description": "Máquina de ursinhos Lulu",
+    "Amount": -1.99,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-20",
+    "Description": "Milho praia",
+    "Amount": -26,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-21",
+    "Description": "Extra Boiçucanga",
+    "Amount": -4.49,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-21",
+    "Description": "Cubo mágico 5x5",
+    "Amount": -35,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-21",
+    "Description": "Extra Boiçucanga",
+    "Amount": -61.97,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-21",
+    "Description": "Sorvete Praia",
+    "Amount": -18,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-21",
+    "Description": "Padaria Maresias",
+    "Amount": -55.42,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-22",
+    "Description": "Sorvete Rochinha",
+    "Amount": -83.52,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-22",
+    "Description": "Pulseira e colar Lúcia Helena",
+    "Amount": -20,
+    "Category": "Família e filhos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-22",
+    "Description": "Claritas",
+    "Amount": -105,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-22",
+    "Description": "Tererê Lúcia Helena",
+    "Amount": -30,
+    "Category": "Família e filhos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-23",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -78.59,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-23",
+    "Description": "Café posto",
+    "Amount": -4,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-23",
+    "Description": "Marmita almoço",
+    "Amount": -29,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-24",
+    "Description": "Combustível",
+    "Amount": -100,
+    "Category": "Combustível",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-24",
+    "Description": "Mangueira Lava Louças",
+    "Amount": -29.9,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-24",
+    "Description": "Mini Extra",
+    "Amount": -7,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-26",
+    "Description": "Lavagem Carro",
+    "Amount": -50,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-27",
+    "Description": "Faxina Alecia",
+    "Amount": -200,
+    "Category": "Faxina",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-27",
+    "Description": "Pizza",
+    "Amount": -89.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-27",
+    "Description": "Mini Extra",
+    "Amount": -42.97,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-28",
+    "Description": "Wipro Technologies",
+    "Amount": 1966,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-28",
+    "Description": "Refrigerante Conveniência",
+    "Amount": -10.94,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-28",
+    "Description": "Estacionamento",
+    "Amount": -10,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-28",
+    "Description": "Mini Extra",
+    "Amount": -29.93,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-29",
+    "Description": "Presente Rafa",
+    "Amount": -63,
+    "Category": "Presentes e doações",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-29",
+    "Description": "Água de côco",
+    "Amount": -12,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-29",
+    "Description": "Pão de Açucar",
+    "Amount": -73.14,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-29",
+    "Description": "Sorvete Borelli",
+    "Amount": -135.5,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-29",
+    "Description": "Almoço Estação Mogiana",
+    "Amount": -215,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-29",
+    "Description": "Brinquedo Lúcia Helena Maui",
+    "Amount": -28,
+    "Category": "Família e filhos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-30",
+    "Description": "Estacionamento",
+    "Amount": -29,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-30",
+    "Description": "Padaria Pane D'oro",
+    "Amount": -39.07,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-30",
+    "Description": "Americanas - Chá de Fralda Tamires",
+    "Amount": -75.97,
+    "Category": "Presentes e doações",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-30",
+    "Description": "Restituição IR",
+    "Amount": 5774.48,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-06-30",
+    "Description": "Anúncio WebMotors",
+    "Amount": -239.9,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-01",
+    "Description": "Paulo Roberto Marquitti",
+    "Amount": 100,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-01",
+    "Description": "Mini Extra",
+    "Amount": -2.69,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-01",
+    "Description": "Empréstimo Luis Paulo",
+    "Amount": -1960,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-02",
+    "Description": "Pizza Ifood",
+    "Amount": -98.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-03",
+    "Description": "IOF",
+    "Amount": -36.48,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-04",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -89.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-04",
+    "Description": "PAY PADAR",
+    "Amount": -42.56,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-04",
+    "Description": "Companhia de Gas de Sao Paulo Comgas",
+    "Amount": -196.45,
+    "Category": "Gás",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-05",
+    "Description": "PAY COBAS",
+    "Amount": -94.32,
+    "Category": "Pets",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-05",
+    "Description": "PAY PAO D",
+    "Amount": -33.4,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-05",
+    "Description": "PAY RjcCo",
+    "Amount": -27.58,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-06",
+    "Description": "Conserto vazamento banheiro",
+    "Amount": -500,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-06",
+    "Description": "PAY Bacio",
+    "Amount": -120.8,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-06",
+    "Description": "PAY RAIA3",
+    "Amount": -563.03,
+    "Category": "Medicamentos / Farmácia",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-07",
+    "Description": "Flavia Roberta Marcolino",
+    "Amount": -80,
+    "Category": "Faxina",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-07",
+    "Description": "Escola Montessori de Campinas LTDA",
+    "Amount": -3242,
+    "Category": "Educação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-07",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -85.37,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-07",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -1046.15,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-07",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1346.05,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-07",
+    "Description": "PAY PANIF",
+    "Amount": -17.55,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-07",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -366.46,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-08",
+    "Description": "PAY PANIF",
+    "Amount": -15.13,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-08",
+    "Description": "PAY OXXO",
+    "Amount": -5.49,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-08",
+    "Description": "REND PAGO APLIC AUT MAIS",
+    "Amount": 0.03,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-08",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 4000,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-08",
+    "Description": "PAY RjcCo",
+    "Amount": -34.8,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-08",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -134.64,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-10",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -89.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-10",
+    "Description": "PAY OXXO",
+    "Amount": -41.47,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-11",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -230.47,
+    "Category": "IPTU",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-11",
+    "Description": "Vivo",
+    "Amount": -80,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-11",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -101.66,
+    "Category": "IPTU",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-11",
+    "Description": "SAQUE DIN ATM CART 00004",
+    "Amount": -100,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-12",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -70.49,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-12",
+    "Description": "PAY MINI",
+    "Amount": -23.19,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-12",
+    "Description": "PAY LEROY",
+    "Amount": -466.6,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-13",
+    "Description": "PAY RjcCo",
+    "Amount": -26.53,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-14",
+    "Description": "PAY OXXO",
+    "Amount": -33.99,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-14",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1447.94,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-15",
+    "Description": "Portoseg S.A - Credito Financiamento e Investimento",
+    "Amount": -1472.74,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-15",
+    "Description": "PAY PAULO",
+    "Amount": -7,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-15",
+    "Description": "PAY PAULA",
+    "Amount": -110,
+    "Category": "Cuidados pessoais",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-15",
+    "Description": "SAQUE DIN ATM CART 00013",
+    "Amount": -200,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-15",
+    "Description": "Banco Bradescard S.A",
+    "Amount": -92.92,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "ITAU BLACK  6500-1394",
+    "Amount": -2140.9,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 1000,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "Claro",
+    "Amount": -224.63,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "Alecan Telecomunicacoes LTDA",
+    "Amount": -53.74,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "JUROS LIMITE DA CONTA",
+    "Amount": -58.55,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -380.79,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "Wipro Technologies",
+    "Amount": 3200,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "PAY MINI",
+    "Amount": -21.68,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-16",
+    "Description": "PAY PANIF",
+    "Amount": -19.8,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-17",
+    "Description": "Itau Seguros de Auto e Residencia S.A",
+    "Amount": -3.65,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-17",
+    "Description": "PAY Gilbe",
+    "Amount": -4.5,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-17",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -105,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-17",
+    "Description": "PAY OXXO",
+    "Amount": -44.27,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-17",
+    "Description": "PAY OXXO",
+    "Amount": -48.85,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "Rafael Queiroz Viani 06300427641",
+    "Amount": -700,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "PAY TUDO",
+    "Amount": -220,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "PAY BOOME",
+    "Amount": -16.9,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "Samara Garcia Almeida",
+    "Amount": -50,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "PAY MINI",
+    "Amount": -25.88,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "PAY BOOME",
+    "Amount": -28.9,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -90.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-18",
+    "Description": "Alecia Batista dos Santos",
+    "Amount": -200,
+    "Category": "Faxina",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-19",
+    "Description": "Companhia Paulista de Forca e Luz",
+    "Amount": -223.94,
+    "Category": "Energia",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-19",
+    "Description": "Marcelo Angelini Celeste",
+    "Amount": -360,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-20",
+    "Description": "PAY EMPOR",
+    "Amount": -95.59,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-21",
+    "Description": "PAY PALAC",
+    "Amount": -47.6,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-22",
+    "Description": "Drogal SJ",
+    "Amount": -54.5,
+    "Category": "Medicamentos / Farmácia",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-22",
+    "Description": "Salgados Dona Rosa",
+    "Amount": -37.2,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-22",
+    "Description": "Marceneiro Prateleira",
+    "Amount": -150,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-22",
+    "Description": "Transporte Madeiras",
+    "Amount": -50,
+    "Category": "Manutenção/Melhorias",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-24",
+    "Description": "Maresias Açaí",
+    "Amount": -26,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-24",
+    "Description": "Maresias Balança",
+    "Amount": -38.9,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-26",
+    "Description": "Maresias Açaí",
+    "Amount": -40,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-27",
+    "Description": "Maresias Sorvete Praia",
+    "Amount": -72,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-27",
+    "Description": "Maresias Água de côco",
+    "Amount": -13,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-28",
+    "Description": "Marmita Português",
+    "Amount": -28,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-28",
+    "Description": "Dental Progresso",
+    "Amount": -275.5,
+    "Category": "Trabalho",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-28",
+    "Description": "Conveniência Prédio",
+    "Amount": -23.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-29",
+    "Description": "PAY MINI",
+    "Amount": -29.68,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-30",
+    "Description": "Wipro Technologies",
+    "Amount": 1965,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-31",
+    "Description": "Conveniência Prédio",
+    "Amount": -18.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-31",
+    "Description": "Mini Extra",
+    "Amount": -30,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-07-31",
+    "Description": "Restituição IR 2024",
+    "Amount": 112.48,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-01",
+    "Description": "COBASI",
+    "Amount": -5.51,
+    "Category": "Pets",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-01",
+    "Description": "Paulo Roberto Marquitti",
+    "Amount": 120,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-01",
+    "Description": "Ifood Pizza",
+    "Amount": -80.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-01",
+    "Description": "Assinatura Google",
+    "Amount": -100,
+    "Category": "Assinaturas e serviços",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-02",
+    "Description": "Mini Extra",
+    "Amount": -63.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-03",
+    "Description": "Empréstimo Li",
+    "Amount": -1960,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-03",
+    "Description": "SAMS Club",
+    "Amount": -123.42,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-03",
+    "Description": "Compra Savegnago",
+    "Amount": -172.74,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-03",
+    "Description": "Lavagem Carro",
+    "Amount": -39,
+    "Category": "Transporte",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "IOF",
+    "Amount": -48.2,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -366.46,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "PAY BE HA",
+    "Amount": -28.5,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -85.37,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1346.05,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "Escola Montessori de Campinas LTDA",
+    "Amount": -2620,
+    "Category": "Educação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "PAY INK T",
+    "Amount": -4,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "Condominio Residencial Athenas",
+    "Amount": -1046.15,
+    "Category": "Condomínio",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-05",
+    "Description": "Companhia de Gas de Sao Paulo Comgas",
+    "Amount": -293.2,
+    "Category": "Gás",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-06",
+    "Description": "PAY RjcCo",
+    "Amount": -34.8,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-07",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 4000,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-07",
+    "Description": "Drogaria Sao Paulo",
+    "Amount": -334.18,
+    "Category": "Medicamentos / Farmácia",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-07",
+    "Description": "PAY RjcCo",
+    "Amount": -3.65,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-08",
+    "Description": "PAY KRUNN",
+    "Amount": -29,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-08",
+    "Description": "PAY RjcCo",
+    "Amount": -8.55,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-08",
+    "Description": "PAY RjcCo",
+    "Amount": -18.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-08",
+    "Description": "Alecia Batista dos Santos",
+    "Amount": -200,
+    "Category": "Faxina",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-08",
+    "Description": "PAY MINI",
+    "Amount": -18.98,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-08",
+    "Description": "RESGATE CDB Cofrinhos",
+    "Amount": 5077.62,
+    "Category": "Investimentos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-08",
+    "Description": "PAY BOOME",
+    "Amount": -28.9,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-09",
+    "Description": "PAY PANIF",
+    "Amount": -20.72,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-09",
+    "Description": "PAY SANDR",
+    "Amount": -243,
+    "Category": "Compras",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-09",
+    "Description": "PAY MINI",
+    "Amount": -60.18,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-10",
+    "Description": "Aparecido Expedito da Silva",
+    "Amount": -20,
+    "Category": "Viagem",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-10",
+    "Description": "PAY POUSA",
+    "Amount": -15,
+    "Category": "Viagem",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-10",
+    "Description": "PAY CAFET",
+    "Amount": -10.9,
+    "Category": "Viagem",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-10",
+    "Description": "PAY POUSA",
+    "Amount": -26,
+    "Category": "Viagem",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-11",
+    "Description": "PAY PANIF",
+    "Amount": -43.69,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-12",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -101.66,
+    "Category": "IPTU",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-12",
+    "Description": "Vivo",
+    "Amount": -80,
+    "Category": "Telefone e Internet",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-12",
+    "Description": "Municipio de Sertaozinho",
+    "Amount": -230.47,
+    "Category": "IPTU",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-13",
+    "Description": "SAQUE DIN ATM CART 00021",
+    "Amount": -100,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-13",
+    "Description": "Q2 Ingressos",
+    "Amount": -307.84,
+    "Category": "Lazer e hobbies",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-13",
+    "Description": "PAY BE HA",
+    "Amount": -41.5,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-14",
+    "Description": "Eluma Alves dos Santos",
+    "Amount": 4000,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-14",
+    "Description": "Itau Unibanco S.A",
+    "Amount": -1447.94,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-14",
+    "Description": "Wipro Technologies",
+    "Amount": 3200,
+    "Category": "Salário",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-15",
+    "Description": "PAY CIA D",
+    "Amount": -303.1,
+    "Category": "Pets",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-15",
+    "Description": "Claro",
+    "Amount": -227.97,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-15",
+    "Description": "PAY RjcCo",
+    "Amount": -3.65,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-15",
+    "Description": "Portoseg S.A - Credito Financiamento e Investimento",
+    "Amount": -1101.85,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-15",
+    "Description": "Banco Bradescard S.A",
+    "Amount": -465.59,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-15",
+    "Description": "Luis Eduardo Angelini Marquitti",
+    "Amount": 404.35,
+    "Category": "Outras receitas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-16",
+    "Description": "Alecan Telecomunicacoes LTDA",
+    "Amount": -53.74,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-16",
+    "Description": "JUROS LIMITE DA CONTA",
+    "Amount": -446.16,
+    "Category": "Impostos e Taxas",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-16",
+    "Description": "PAY RAMOS",
+    "Amount": -68,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-16",
+    "Description": "PAY SORFR",
+    "Amount": -2.5,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-16",
+    "Description": "PAY SORFR",
+    "Amount": -36.4,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-16",
+    "Description": "Ifood.com Agencia de Restaurantes Online S.A",
+    "Amount": -72.89,
+    "Category": "Alimentação",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-16",
+    "Description": "ITAU BLACK  6500-1394",
+    "Amount": -1938.73,
+    "Category": "Dívidas e empréstimos",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-17",
+    "Description": "PAY MINI",
+    "Amount": -10.25,
+    "Category": "Mercado",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-18",
+    "Description": "Mercado Pago Instituicao de Pagamento LTDA",
+    "Amount": -659.66,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  },
+  {
+    "Date": "2025-08-18",
+    "Description": "PAY OXXO",
+    "Amount": -14.28,
+    "Category": "Outros",
+    "Account": "Itau Luis"
+  }
+]
