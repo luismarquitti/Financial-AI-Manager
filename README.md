@@ -1,83 +1,123 @@
 # Financial AI Manager
 
-![Financial AI Manager Screenshot](https://storage.googleapis.com/fpl-prd-dm-generative-ai-testing/project-showcase/financial-ai-manager-screenshot.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/financial-ai-manager/ci.yml?branch=main)
+![Version](https://img.shields.io/badge/version-0.7.0-brightgreen)
 
-An intelligent financial transaction analyzer powered by the Google Gemini API. This application allows users to connect to a simulated in-memory database or upload their CSV/XLSX transaction data to receive a comprehensive summary, insightful charts, and an AI-powered analysis of their financial health.
+An intelligent financial transaction analyzer powered by the Google Gemini API. This application allows users to connect to a database or upload their transaction data to receive a comprehensive summary, insightful charts, and an AI-powered analysis of their financial health.
 
-## ✨ Key Features
+## Table of Contents
 
-- **Dual Data Sources**: Connect to a pre-populated mock database (in-memory) or upload your own transaction files (`.csv`, `.xlsx`).
-- **AI-Powered Analysis**: Leverages the Gemini API to generate an insightful summary of your financial health, including income/expense analysis and actionable advice.
-- **Interactive Dashboard**: Visualize your finances with dynamic charts for monthly income vs. expenses and spending by category.
-- **Full CRUD Operations**: Create, Read, Update, and Delete transactions, categories, and accounts directly within the application.
-- **Data Staging & Review**: A dedicated page to review, edit, and select transactions from an uploaded file before importing them.
-- **Advanced Filtering**: Easily filter and search through transactions by description, type (income/expense), category, and date range.
-- **Settings Management**: Customize your financial tracking by adding, editing, or deleting personal spending categories and financial accounts.
-- **Modern & Responsive UI**: Clean, intuitive interface built with React and Tailwind CSS that works seamlessly across devices.
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact & Support](#contact--support)
 
-## 🚀 How It Works
+## Features
 
-The application flow is designed to be simple and intuitive.
+-   **🤖 AI-Powered Analysis**: Leverages the Gemini API to generate an insightful summary of your financial health, including income/expense analysis and actionable advice.
+-   **📊 Interactive Dashboard**: Visualize your finances with dynamic charts for monthly income vs. expenses and spending by category.
+-   **🔄 Dual Data Sources**: Get started instantly by connecting to a pre-populated mock database or by uploading your own transaction files (`.csv`, `.xlsx`).
+-   **✍️ Full CRUD Operations**: Enjoy complete control with the ability to Create, Read, Update, and Delete transactions, categories, and accounts directly within the application.
+-   **🔍 Data Staging & Review**: A dedicated page to review, edit, and select transactions from an uploaded file before importing them, ensuring data accuracy.
+-   **🔎 Advanced Filtering**: Easily filter and search through transactions by description, type (income/expense), category, and date range.
+-   **⚙️ Settings Management**: Customize your financial tracking by adding, editing, or deleting personal spending categories and financial accounts.
+-   **📱 Modern & Responsive UI**: A clean, intuitive interface built with React and Tailwind CSS that works seamlessly across devices.
 
-1.  **Choose a Data Source**: On the home screen, you can either:
-    *   **Connect to Database**: Loads a set of mock financial data into the application's memory, enabling full CRUD functionality immediately.
-    *   **Import File**: Upload a `.csv` or `.xlsx` file containing your transaction history.
+## Tech Stack
 
-2.  **Review & Import (File Upload)**:
-    *   After uploading a file, you are taken to the **Import Page**.
-    *   Here, you can review all parsed transactions. You can deselect any you don't want to import.
-    *   You can also **edit** individual transactions to correct data or **add new ones** manually before the final import.
-    *   Click "Save Selected to Database" to finalize the import and load the data into the app.
+-   **Frontend**: React, TypeScript, Vite, Tailwind CSS, Recharts
+-   **Backend**: Node.js, Express, TypeScript
+-   **API**: GraphQL with Apollo Server (Backend) & Apollo Client (Frontend)
+-   **Database**: PostgreSQL
+-   **AI Integration**: Google Gemini API (`@google/genai`)
+-   **Development**: Monorepo with Yarn Workspaces, Docker
 
-3.  **Explore the Dashboard**:
-    *   The main dashboard provides a high-level overview of your finances for the selected account.
-    *   View summary cards for total income, expenses, and net savings.
-    *   Read the **AI Financial Analyst** section, where Gemini provides a concise summary and actionable insights based on your current data.
-    *   Interact with the bar and pie charts to understand your financial trends visually.
+## Installation
 
-4.  **Manage Transactions**:
-    *   Navigate to the **Transactions** page to see a detailed, paginated list of all your transactions.
-    *   Use the powerful filter and search controls to find specific entries.
-    *   Add, edit, or delete transactions as needed.
+Follow these steps to set up and run the project locally.
 
-5.  **Configure Settings**:
-    *   Go to the **Settings** page to manage the lists of available `Categories` and `Accounts`. This ensures your transaction data is always well-organized.
+#### Prerequisites
 
-## 🛠️ Technology Stack
+-   [Node.js](https://nodejs.org/) (v18 or later recommended)
+-   [Yarn](https://yarnpkg.com/) (Classic or Berry)
+-   [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
--   **Frontend**: [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)
--   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
--   **AI Integration**: [Google Gemini API (`@google/genai`)](https://github.com/google/generative-ai-js)
--   **Charting**: [Recharts](https://recharts.org/)
--   **Data Simulation**: [Apollo Client](https://www.apollographql.com/docs/react/) is used to simulate a GraphQL API for an in-memory "database". All data is reset on page refresh.
--   **File Parsing**: [SheetJS (xlsx)](https://sheetjs.com/)
+#### Setup Instructions
 
----
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/financial-ai-manager.git
+    cd financial-ai-manager
+    ```
 
-## 🌟 Next Steps
+2.  **Install dependencies:**
+    This will install dependencies for all workspaces (client and server).
+    ```bash
+    yarn install
+    ```
 
-This application provides a strong foundation for a personal finance tool. Here are some suggestions for future enhancements to improve the overall experience:
+3.  **Configure Environment Variables:**
+    Navigate to the server package and create a `.env` file.
+    ```bash
+    cd packages/server
+    cp .env.example .env
+    ```
+    Now, open the new `.env` file and add your PostgreSQL database credentials and your Google Gemini API key.
 
-### 1. AI-Powered Transaction Categorization
-- **Challenge**: Manually categorizing dozens of imported transactions is time-consuming and error-prone.
-- **Proposed Solution**: Enhance the **Import Page** with an "AI-Categorize" feature. This would use the Gemini API to analyze the description of each new transaction and suggest the most appropriate category based on the user's existing categories and transaction history.
-- **Implementation Idea**:
-    - Add a button like "Suggest Categories with AI" on the import screen.
-    - When clicked, send the new transactions (description, amount) and the list of available categories to Gemini.
-    - The prompt would ask the model to return a suggested category for each transaction.
-    - The UI would then pre-fill the category dropdown for each transaction, perhaps with a small icon indicating it's an AI suggestion. The user can then quickly review and confirm.
+4.  **Start the Database:**
+    Make sure Docker Desktop is running. Then, from the project root, start the PostgreSQL container.
+    ```bash
+    docker-compose up -d
+    ```
 
-### 2. Data Persistence
-- **Challenge**: The current application is a demo and uses an in-memory database, meaning all changes are lost upon refreshing the page.
-- **Proposed Solution**: Integrate browser-based storage like **`localStorage`** or **`IndexedDB`**. This would allow users' transactions, accounts, and categories to be saved between sessions, creating a much more useful and persistent experience.
+5.  **Seed the Database:**
+    This command will create the necessary tables and populate them with initial sample data.
+    ```bash
+    yarn db:seed
+    ```
 
-### 3. Budgeting and Goals
-- **Challenge**: Users can see where their money went, but they can't proactively manage their spending.
-- **Proposed Solution**: Introduce a "Budgets" feature. Users could set monthly spending limits for specific categories (e.g., "$300/month for Groceries"). The dashboard could then display progress bars or gauges showing how much of the budget has been spent, providing clear visual feedback to help users stay on track.
+6.  **Run the Application:**
+    This will start both the backend server and the frontend development server concurrently.
+    ```bash
+    yarn dev
+    ```
+    The application should now be running at `http://localhost:5173`.
 
-### 4. Advanced Visualizations & Reporting
-- **Challenge**: The current charts provide a good overview, but more in-depth analysis is limited.
-- **Proposed Solution**: Add more advanced reporting features:
-    - A **Cash Flow Trend** line chart to visualize net savings over time.
-    - A **Date Range Filter** directly on the dashboard to analyze specific periods (e.g., last quarter, year-to-date).
-    - An option to **Export** reports to PDF or CSV.
+## Usage
+
+Once the application is running, you can start using it in two ways:
+
+1.  **Connect to Database:**
+    -   On the welcome screen, click the "Connect & Fetch Transactions" button.
+    -   This will load the pre-seeded data into the application.
+    -   You will be redirected to the main dashboard, where you can see the AI summary, charts, and transaction data.
+
+2.  **Import a File:**
+    -   On the welcome screen, select the "Import File" tab.
+    -   Click to upload or drag-and-drop a `.csv` or `.xlsx` file containing your transactions.
+    -   You will be taken to the "Review & Import" page. Here you can edit, delete, or deselect transactions before saving.
+    -   Click "Save Selected to Database" to import the data and view the dashboard.
+
+From there, you can navigate between the **Dashboard**, **Transactions**, and **Settings** pages to manage and analyze your financial data.
+
+## Contributing
+
+Contributions are welcome! We follow a standard fork-and-pull-request workflow.
+
+1.  **Open an Issue:** Before starting work on a new feature or bug fix, please open a GitHub issue to discuss the proposed changes.
+2.  **Fork the Repository:** Create your own fork of the project.
+3.  **Create a Branch:** Create a feature branch from the `main` branch (e.g., `feature/add-new-chart`).
+4.  **Make Changes:** Implement your changes and ensure all tests pass.
+5.  **Submit a Pull Request:** Push your branch to your fork and open a pull request back to the original repository's `main` branch. Please provide a clear description of your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact & Support
+
+For support, questions, or to report a bug, please [open a GitHub issue](https://github.com/your-username/financial-ai-manager/issues).
