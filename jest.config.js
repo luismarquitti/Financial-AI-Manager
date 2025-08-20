@@ -1,6 +1,5 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'node',
   projects: ['<rootDir>/packages/*'],
   coverageDirectory: 'coverage',
@@ -10,4 +9,7 @@ module.exports = {
     '!packages/**/dist/**',
     '!packages/**/node_modules/**',
   ],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
 };
