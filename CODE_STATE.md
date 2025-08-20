@@ -1,14 +1,21 @@
-## Application State: v0.5.0 (AI Categorization Backend)
+## Application State: v0.6.0 (Testing & Linting Framework)
 
-This document describes the state of the "Financial AI Manager" application after implementing the backend infrastructure for the AI-powered transaction categorization feature.
+This document describes the state of the "Financial AI Manager" application after the integration of a comprehensive testing and code quality framework.
 
 ### Architecture
 
 -   **Full-Stack Monorepo**: The project remains a Yarn Workspaces monorepo. The core application architecture is unchanged.
 
-### Key Changes from v0.4.2
+### Key Changes from v0.5.0
 
--   **GraphQL API Enhancement**: The backend API has been extended with a new `suggestCategories` mutation. This endpoint is designed to receive a list of uncategorized transactions and return AI-generated category suggestions.
--   **New Gemini Service Functionality**: A new function, `suggestTransactionCategories`, has been added to the server-side `geminiService`. It constructs a precise prompt and uses a strict JSON response schema to ensure reliable categorization suggestions from the Gemini API. This keeps all AI logic and the API key securely on the server.
--   **Resolver Implementation**: A new resolver connects the `suggestCategories` mutation to the database service (to fetch available categories) and the Gemini service, orchestrating the entire suggestion workflow.
--   **Frontend Readiness**: The backend is now fully prepared to support the upcoming frontend implementation of the AI categorization feature on the "Import" page.
+-   **Code Quality & Linting**:
+    -   **ESLint**: Integrated throughout the monorepo to enforce a consistent coding style and catch potential errors early. A root configuration provides the base, with package-specific overrides for Node.js (`server`) and React (`client`).
+    -   **Prettier**: Added to automatically format the entire codebase, ensuring a uniform style.
+    -   **Root Scripts**: New scripts (`format`, `lint`, `lint:fix`) have been added to the root `package.json` for easy execution of these tools across all workspaces.
+
+-   **Unit Testing**:
+    -   **Jest**: The Jest testing framework has been configured for the entire monorepo.
+    -   **React Testing Library**: The `client` package is now equipped with React Testing Library for component testing.
+    -   **Server-Side Mocking**: Implemented a manual mock for the `pg` (PostgreSQL) library, allowing for isolated unit tests of the database service layer without requiring a live database connection.
+    -   **Example Tests**: Added initial unit tests for a client-side component (`SummaryCard.tsx`) and a server-side service (`dbService.ts`) to serve as a template for future test development.
+    -   **Root Scripts**: New scripts (`test`, `test:watch`, `test:coverage`) have been added to the root `package.json` to run tests across the project.

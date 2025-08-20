@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.6.0 - Testing & Linting Framework
+*Date: 2024-07-30*
+
+### Added
+- **ESLint & Prettier**: Integrated a comprehensive linting and formatting setup across the entire monorepo to enforce code quality and a consistent style. Added root-level scripts (`lint`, `format`).
+- **Jest & React Testing Library**: Established a unit testing framework using Jest. The client is configured with React Testing Library for component tests, and the server uses Jest's mocking capabilities to test services in isolation. Added root-level scripts (`test`, `test:coverage`).
+- **Example Unit Tests**: Added initial tests for both a frontend component (`SummaryCard`) and a backend service (`dbService`) to demonstrate usage and provide a foundation for future test coverage.
+
+---
+
 ## v0.5.0 - Feature: AI Categorization Backend
 *Date: 2024-07-29*
 
