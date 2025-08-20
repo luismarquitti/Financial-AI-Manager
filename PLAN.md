@@ -1,237 +1,186 @@
 # Project Plan: Financial AI Manager
 
-This document is the single source of truth for the development plan, tracking all features from conception to completion.
+This document provides a high-level strategic overview of the Financial AI Manager project. It serves as a single source of truth for our vision, major initiatives, and architectural principles.
+
+**Detailed user stories, technical tasks, and sprint planning are managed in our GitHub Project board.**
 
 ---
 
-### Foundational & Core Features
+### Vision & Current State
+
+The Financial AI Manager is a full-stack, AI-powered web application designed to provide users with intelligent, automated analysis of their personal financial transactions.
+
+Our current application provides a robust foundation built on a PERN (PostgreSQL, Express, React, Node) stack with a GraphQL API. Key existing capabilities include:
+-   **Full CRUD Functionality:** Complete management of transactions, accounts, and categories.
+-   **Interactive Dashboard:** Rich data visualizations and a powerful AI-driven financial summary via the Gemini API.
+-   **Flexible Data Ingestion:** Support for both file uploads (`.csv`, `.xlsx`) and a direct database connection.
+-   **Quality Framework:** A comprehensive testing and linting framework ensures code quality and stability.
+-   **Production-Ready:** The application is fully containerized and includes a detailed deployment guide for Google Cloud Platform.
 
 ---
 
-## Feature: Full-Stack Migration (PERN + GraphQL)
+### Strategic Initiatives (Epics)
 
--   **Status:** Completed
--   **Description:** Migrate the application from a client-side only demo to a full-stack architecture using PostgreSQL, Express, React, and Node (PERN stack) with a GraphQL API. This establishes a robust and scalable foundation for all future development.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] Establish a Yarn Workspaces monorepo for client/server packages.
-    -   [x] Set up a local PostgreSQL database using Docker.
-    -   [x] Create a database schema and seeding script.
-    -   [x] Implement a Node/Express backend server with Apollo Server.
-    -   [x] Build a complete GraphQL API for all CRUD operations.
-    -   [x] Move the Gemini API integration to the backend server.
-    -   [x] Integrate Apollo Client into the React frontend and refactor all data fetching.
--   **Dependencies:** None.
--   **Potential Enhancements:**
-    -   Implement GraphQL Subscriptions for real-time data updates.
-    -   Introduce caching strategies (e.g., Redis) to reduce database load.
+Our development is organized around the following strategic epics. These represent the major areas of focus for improving and extending the application's capabilities.
 
----
+#### 1. Foundational Excellence & DevOps
+-   **Goal:** To ensure the application remains scalable, maintainable, secure, and easy to deploy.
+-   **Key Features:** This involves enhancing our CI/CD pipelines, expanding test coverage across all layers of the stack (Unit, Integration, E2E), and continuously improving our documentation and monitoring strategies.
 
-## Feature: Application Core & Navigation
+#### 2. Advanced Credit Card Management
+-   **Goal:** To introduce a best-in-class feature set for tracking and managing credit card spending.
+-   **Key Features:**
+    -   **Credit Card Accounts:** Users can define accounts with specific closing and payment due dates.
+    -   **Installment Tracking:** Simple entry and automatic creation of transactions for installment-based purchases.
+    -   **Statement Dashboards:** A dedicated view for each credit card, showing current statement details, historical spending trends, and upcoming installments.
 
--   **Status:** Completed
--   **Description:** As a user, I need a consistent and intuitive navigation structure to move between the different sections of the application, such as the Dashboard, Transactions, and Settings.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] A persistent sidebar is present on the left side of the screen.
-    -   [x] The sidebar contains clear, icon-based navigation buttons for all main pages.
-    -   [x] The currently active page is visually highlighted in the sidebar.
-    -   [x] Navigation buttons are disabled until data is loaded to prevent navigating to empty states.
-    -   [x] A "Reset" button is available to clear all data and return to the initial state.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
--   **Potential Enhancements:**
-    -   Add keyboard shortcuts for quick navigation between pages.
-    -   Implement a responsive mobile-friendly navigation (e.g., a collapsible hamburger menu).
+#### 3. AI-Powered Enhancements
+-   **Goal:** To further leverage AI to automate manual tasks and provide deeper financial insights.
+-   **Key Features:**
+    -   **AI Transaction Categorization:** Automatically suggest categories for imported transactions to streamline the onboarding process.
+    -   **Predictive Analysis:** (Future) Analyze trends to provide forward-looking insights and budget forecasting.
 
 ---
 
-## Feature: Data Input & Onboarding
+### Detailed Task Breakdown
 
--   **Status:** Completed
--   **Description:** As a new user, I can easily get started by either connecting to the pre-populated database or by uploading my own transaction file.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] The initial screen presents two clear options: "Connect to Database" and "Import File".
-    -   [x] Clicking "Connect to Database" fetches all data and navigates to the Dashboard.
-    -   [x] The "Import File" option provides a drag-and-drop zone or file selector for `.csv` and `.xlsx` files.
-    -   [x] A loading indicator is displayed while data is being fetched or a file is being processed.
-    -   [x] Clear error messages are shown if the connection fails or the file is invalid.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+This section contains a detailed breakdown of tasks, which can be used to populate the GitHub Project board.
 
----
+#### Epic 1: Foundational Excellence & DevOps
 
-### User-Facing Features
+*   **Title:** Establish and Maintain a Robust, Scalable, and Well-Documented Application Foundation
+*   **Description:** This epic covers all foundational work required to ensure the application is secure, maintainable, testable, and easily deployable. It encompasses architecture, CI/CD, documentation, and quality assurance.
+*   **Labels:** `epic`, `devops`, `quality`, `documentation`
 
----
+    ---
 
-## Feature: Financial Dashboard
+    ##### Feature: Comprehensive Testing Framework
+    *   **Title:** Implement and Maintain a Multi-Layered Testing Strategy
+    *   **Labels:** `feature`, `quality`, `testing`
+    *   **Effort:** L
 
--   **Status:** Completed
--   **Description:** As a user, I can view a comprehensive, high-level dashboard that summarizes my financial health and visualizes key trends.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] Dashboard displays key metrics in summary cards: Total Income, Total Expenses, and Net Savings.
-    -   [x] An "AI Financial Analyst" section displays the summary generated by the Gemini API.
-    -   [x] A bar chart visualizes monthly income vs. expenses over time.
-    -   [x] A pie chart shows the breakdown of expenses by category.
-    -   [x] Users can filter the entire dashboard view by a specific account using a dropdown menu.
-    -   [x] A paginated table shows a preview of all transactions for the selected account.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
--   **Potential Enhancements:**
-    -   Add a global date-range filter to the dashboard to analyze specific periods.
-    -   Allow users to customize the dashboard layout (e.g., hide or reorder widgets).
-    -   Introduce budgeting goals with progress bars.
+        *   **User Story:** As a developer, I want a comprehensive unit test suite for all critical services and components, so that I can refactor code with confidence and prevent regressions.
+            *   **Description:** Write unit tests for all backend services, GraphQL resolvers, and key utility functions. Ensure mocks are used for external dependencies like the database and Gemini API.
+            *   **Acceptance Criteria:**
+                1.  All functions in `dbService.ts` and `geminiService.ts` have corresponding unit tests.
+                2.  All major UI components (`Dashboard`, `TransactionTable`, `SettingsList`) have unit tests covering their primary states and interactions.
+                3.  Code coverage for critical business logic exceeds 80%.
+            *   **Labels:** `user-story`, `testing`, `backend`, `frontend`, `quality`
+            *   **Effort:** L
 
----
+        *   **Technical Task:** Set up and configure an integration testing environment.
+            *   **Description:** Configure a separate test database that can be seeded and torn down by the test runner. This will allow for testing the interaction between GraphQL resolvers and the database service.
+            *   **Labels:** `technical-task`, `testing`, `backend`, `devops`
+            *   **Effort:** M
 
-## Feature: AI-Powered Financial Summary
+        *   **User Story:** As a QA Engineer, I want an end-to-end (E2E) test suite for core user journeys, so that I can automatically verify that critical application flows are working correctly in a real browser environment.
+            *   **Description:** Implement E2E tests for user journeys like: 1) Uploading a file and importing transactions, and 2) Adding, editing, and deleting a transaction from the UI.
+            *   **Labels:** `user-story`, `testing`, `e2e`
+            *   **Effort:** L
 
--   **Status:** Completed
--   **Description:** As a user, I can receive an automated, intelligent analysis of my financial data, providing a narrative summary and actionable advice without manual effort.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] The backend securely calls the Gemini API with the user's transaction data.
-    -   [x] The prompt sent to the AI is well-structured and asks for a specific JSON output.
-    -   [x] The Gemini API response is parsed and displayed in a dedicated "AI Financial Analyst" section on the dashboard.
-    -   [x] The analysis includes an overall summary, income analysis, expense analysis, and a list of actionable insights.
-    -   [x] A clear loading state is displayed while the AI analysis is in progress.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
--   **Potential Enhancements:**
-    -   Allow users to ask follow-up questions about their summary in a chat-like interface.
-    -   Generate comparative analyses (e.g., "How does this month compare to last month?").
+    ---
 
----
+    ##### Feature: CI/CD & Production Readiness
+    *   **Title:** Automate and Standardize Build, Test, and Deployment Pipelines
+    *   **Labels:** `feature`, `devops`, `ci-cd`
+    *   **Effort:** M
 
-## Feature: Transaction Management
+        *   **Technical Task:** Implement CI pipeline using GitHub Actions.
+            *   **Description:** Create a GitHub Actions workflow that triggers on every pull request. The workflow must run linting, formatting checks, and all unit tests for both the client and server.
+            *   **Labels:** `technical-task`, `devops`, `ci-cd`
+            *   **Effort:** M
 
--   **Status:** Completed
--   **Description:** As a user, I can view, search, and manage all of my financial transactions in a detailed and organized manner.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] A dedicated "Transactions" page displays all transactions in a sortable, paginated table.
-    -   [x] Users can add a new transaction via a modal form.
-    -   [x] Users can edit an existing transaction via the same modal form.
-    -   [x] Users can delete a transaction with a confirmation prompt.
-    -   [x] Powerful filtering options are available: search by description, filter by type (income/expense), filter by category, and select a date range.
-    -   [x] A summary section shows the total income and expenses for the currently filtered results.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
--   **Potential Enhancements:**
-    -   Implement bulk editing (e.g., select multiple transactions and re-categorize all at once).
-    -   Add the ability to split a single transaction into multiple categories.
+        *   **Technical Task:** Implement CD pipeline to GCP using GitHub Actions.
+            *   **Description:** Create a workflow that triggers on merge to the `main` branch. It should build and push the server's Docker image to Artifact Registry and deploy the new revision to Cloud Run. It should also build and deploy the client to Cloud Storage.
+            *   **Labels:** `technical-task`, `devops`, `ci-cd`, `gcp`
+            *   **Effort:** M
 
----
+    ---
 
-## Feature: File Import & Staging
+#### Epic 2: Advanced Credit Card Management
 
--   **Status:** Completed
--   **Description:** As a user, I can upload a transaction file and review, edit, and selectively import the data, ensuring data accuracy before it's saved.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] The application can parse `.csv` and `.xlsx` files with flexible column headers.
-    -   [x] Parsed transactions are displayed on a dedicated "Import" page.
-    -   [x] Users can select or deselect transactions to be imported using checkboxes.
-    -   [x] Users can add, edit, or delete transactions in the staging area before the final import.
-    -   [x] Clicking "Save Selected to Database" saves only the checked transactions and navigates to the dashboard.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+*   **Title:** Introduce Comprehensive Credit Card Tracking and Management
+*   **Description:** This epic covers the end-to-end implementation of features allowing users to manage credit cards, track statements, and handle installment purchases.
+*   **Labels:** `epic`, `enhancement`
 
----
+    ---
 
-## Feature: Settings Management
+    ##### Feature: Credit Card Data Model & Settings
+    *   **Title:** Allow Users to Create and Manage Credit Card Accounts
+    *   **Labels:** `feature`, `backend`, `frontend`, `ux`
+    *   **Effort:** M
 
--   **Status:** Completed
--   **Description:** As a user, I can customize the application by managing my own lists of financial accounts and spending categories.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] A dedicated "Settings" page is available.
-    -   [x] Users can add a new category or account.
-    -   [x] Users can rename an existing category or account.
-    -   [x] Users can delete a category or account with a confirmation prompt.
-    -   [x] Changes are reflected across the application (e.g., in transaction dropdowns).
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
--   **Potential Enhancements:**
-    -   Add the ability to assign a color to each category for better visualization in charts.
-    -   Allow users to set monthly budgets for each category.
+        *   **Technical Task:** Update Database Schema for Credit Card Accounts.
+            *   **Description:** Modify the `accounts` table to include `account_type` (e.g., 'checking', 'credit_card'), `closing_day` (integer), and `payment_due_day` (integer). These new fields should be nullable.
+            *   **Labels:** `technical-task`, `backend`, `database`
+            *   **Effort:** S
 
----
+        *   **Technical Task:** Update GraphQL Schema and Resolvers for Credit Card Accounts.
+            *   **Description:** Extend the `Account` type in the GraphQL schema to include the new fields. Update the `addAccount` and `updateAccount` mutations and their corresponding resolvers to handle these new properties.
+            *   **Labels:** `technical-task`, `backend`, `graphql`
+            *   **Effort:** S
 
-## Feature: Credit Card Management
+        *   **User Story:** As a user, I want to designate an account as a "Credit Card" in the settings, so that I can specify its closing and payment due dates for accurate tracking.
+            *   **Description:** In the Settings > Accounts UI, when adding or editing an account, provide a dropdown to select the account type. If "Credit Card" is selected, dynamically show input fields for "Closing Day" and "Payment Due Day".
+            *   **Acceptance Criteria:**
+                1.  An "Account Type" dropdown is available in the account creation/edit form.
+                2.  Selecting "Credit Card" reveals the "Closing Day" and "Payment Due Day" fields.
+                3.  Saving a credit card account correctly persists the new properties in the database.
+            *   **Labels:** `user-story`, `frontend`, `settings`, `ux`
+            *   **Effort:** M
 
--   **Status:** Not Started
--   **Description:** As a user, I want to manage my credit cards by tracking their specific closing and due dates. I need to see the current statement balance, a list of future/unpaid transactions, and ensure that credit card payments are properly integrated into my overall financial picture.
--   **Key Requirements & Acceptance Criteria:**
-    -   **Data Model:**
-        -   Credit Cards will be a special type of "Account", distinguished by an `account_type` field.
-        -   Credit Card accounts will have additional properties: `closing_day` (day of the month) and `payment_due_day` (day of the month).
-        -   Credit Card payments must be recorded as "Transfer" transactions from a liquid account (e.g., Checking) to the Credit Card account.
-    -   **Settings UI:**
-        -   In the Settings > Accounts section, users can create or edit an account and specify its type as "Credit Card".
-        -   When "Credit Card" type is selected, input fields for "Closing Day" and "Payment Due Day" must become visible and required.
-    -   **Transaction Entry:**
-        -   When adding an expense transaction, the user must be able to select a Credit Card as the payment source from the "Account" dropdown.
-        -   The transaction form must include an option for installment purchases.
-        -   The user must be able to input the number of installments for a purchase. The system will automatically calculate and generate all future installment transactions, dated one month apart and linked together.
-    -   **Credit Card Detail View:**
-        -   A new dedicated view will be accessible for each credit card to see its specific dashboard.
-        -   This view must display a list of transactions for the current open statement (i.e., transactions between the last closing day and the next closing day).
-        -   It must show the total balance for the current statement, including a category breakdown chart.
-        -   It must display a historical chart of the last 12 closed statement totals.
-        -   It must provide a list of upcoming future statements, showing the installment transactions scheduled for each period.
--   **Dependencies:**
-    -   Feature: Full-Stack Migration (PERN + GraphQL)
-    -   Feature: Transaction Management
--   **Potential Enhancements:**
-    -   Automatic reminders for upcoming payment due dates.
-    -   Charts showing credit card debt over time.
+    ---
 
----
+    ##### Feature: Installment Purchase Tracking
+    *   **Title:** Enable Users to Record and Track Purchases Made in Installments
+    *   **Labels:** `feature`, `backend`, `frontend`
+    *   **Effort:** L
 
-### Quality, Operations & Future AI
+        *   **Technical Task:** Update Database Schema for Installments.
+            *   **Description:** Add `installment_group_id` (UUID, nullable) and `installment_number` (e.g., "1 of 12") fields to the `transactions` table.
+            *   **Labels:** `technical-task`, `backend`, `database`
+            *   **Effort:** S
 
----
+        *   **Technical Task:** Implement Backend Logic for Installment Creation.
+            *   **Description:** When a transaction is created with an installment option, the backend resolver must generate all subsequent monthly transaction records. Each will share the same `installment_group_id` and have a unique date and `installment_number`.
+            *   **Labels:** `technical-task`, `backend`, `graphql`
+            *   **Effort:** M
 
-## Feature: Code Quality Framework: Linting & Testing
+        *   **User Story:** As a user adding a new transaction, I want to specify if it's an installment purchase and enter the total number of installments, so that the system automatically creates all future payments for me.
+            *   **Description:** In the "Add Transaction" modal, add a checkbox for "Is this an installment purchase?". If checked, show a number input for "Number of Installments".
+            *   **Acceptance Criteria:**
+                1.  The installment option is present in the transaction modal.
+                2.  When a 3-installment purchase of $300 is created on Jan 15, three transactions of -$100 are created on Jan 15, Feb 15, and Mar 15.
+                3.  All three transactions are linked visually or by data in the transaction list.
+            *   **Labels:** `user-story`, `frontend`, `transactions`
+            *   **Effort:** M
 
--   **Status:** Completed
--   **Description:** As a developer, I want a robust code quality and testing framework to ensure code consistency, prevent errors, and improve long-term maintainability.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] ESLint is integrated for static code analysis.
-    -   [x] Prettier is integrated for automated code formatting.
-    -   [x] Jest and React Testing Library are integrated for unit and component testing.
-    -   [x] Root-level scripts (`lint`, `format`, `test`) are available.
-    -   [x] Example tests for both frontend and backend are implemented.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+    ---
 
----
+    ##### Feature: Credit Card Statement Dashboard
+    *   **Title:** Provide a Dedicated View for Analyzing Credit Card Statements
+    *   **Labels:** `feature`, `frontend`, `ux`
+    *   **Effort:** XL
 
-## Feature: Comprehensive Component Test Coverage
+        *   **Technical Task:** Create New GraphQL Queries for Statement Data.
+            *   **Description:** Develop new GraphQL queries to fetch transactions for a specific credit card account within a given statement period (between two closing dates). Also, create a query to fetch a summary of past statement totals.
+            *   **Labels:** `technical-task`, `backend`, `graphql`
+            *   **Effort:** M
 
--   **Status:** In Progress
--   **Description:** As a developer, I want all React components and key backend services to have comprehensive tests to ensure the application is reliable and free of regressions.
--   **Key Requirements & Acceptance Criteria:**
-    -   [ ] Test all presentational components for correct prop rendering.
-    -   [ ] Test all interactive components, including user events and callback triggers.
-    -   [ ] Test page-level components with mocked Apollo Client data to verify integration.
-    -   [ ] Test high-level application flows, such as navigation and modal interactions.
-    -   [ ] Achieve a target of >80% test coverage for all critical services and components.
--   **Dependencies:** Feature: Code Quality Framework: Linting & Testing.
+        *   **User Story:** As a user, I want to click on a credit card account and see a dedicated dashboard for it, so that I can understand my spending for the current statement period.
+            *   **Description:** Create a new page/view for credit card accounts. This view should display the current statement's closing date, due date, and total balance. It should also list all transactions within the current statement period.
+            *   **Acceptance Criteria:**
+                1.  Credit card accounts in lists are clickable and navigate to the new dashboard.
+                2.  The dashboard correctly calculates the date range for the current open statement based on the account's closing day.
+                3.  The total balance and transaction list accurately reflect the purchases for that period.
+            *   **Labels:** `user-story`, `frontend`, `dashboard`, `ux`
+            *   **Effort:** L
 
----
-
-## Feature: AI-Powered Transaction Categorization
-
--   **Status:** Not Started
--   **Description:** As a user importing a transaction file, I want the application to automatically suggest a category for each transaction based on its description, significantly reducing the manual effort required for data entry.
--   **Key Requirements & Acceptance Criteria:**
-    -   [ ] A "Suggest Categories" button is added to the Import page.
-    -   [ ] Clicking the button sends uncategorized transaction descriptions to the Gemini API.
-    -   [ ] The AI returns a suggested category for each transaction from the user's existing list.
-    -   [ ] Category dropdowns in the import table are automatically populated with the AI's suggestions.
-    -   [ ] The user can review and override any AI suggestion before saving.
-    -   [ ] A clear loading state is shown while the AI is processing the request.
--   **Dependencies:** Feature: File Import & Staging.
-
----
-
-## Feature: Production Readiness: Documentation & GCP Deployment
-
--   **Status:** Completed
--   **Description:** As a developer, I need comprehensive documentation and a clear deployment path to get the application running in a production environment on Google Cloud Platform.
--   **Key Requirements & Acceptance Criteria:**
-    -   [x] A multi-stage `Dockerfile` for containerizing the backend service is created.
-    -   [x] Technical documentation covering the project architecture and local setup is written.
-    -   [x] A step-by-step deployment guide for GCP (Cloud SQL, Cloud Run, Cloud Storage) is available.
-    -   [x] The deployment guide includes a detailed cost estimation and free tier analysis.
--   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+        *   **User Story:** As a user on the credit card dashboard, I want to see a chart of my last 12 closed statement totals, so that I can track my spending trends over time.
+            *   **Description:** Add a bar chart to the credit card dashboard that visualizes the total amount for each of the last 12 closed statements.
+            *   **Acceptance Criteria:**
+                1.  A bar chart is present on the credit card dashboard.
+                2.  The chart correctly displays 12 bars, each representing a past statement total.
+                3.  Hovering over a bar shows the exact total and statement period.
+            *   **Labels:** `user-story`, `frontend`, `dashboard`, `visualization`
+            *   **Effort:** M
