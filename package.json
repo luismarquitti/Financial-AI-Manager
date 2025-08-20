@@ -14,9 +14,13 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:e2e": "yarn node -e \"require('@playwright/test/cli').main()\" test",
+    "test:e2e:report": "playwright show-report",
+    "test:e2e:ui": "playwright test --ui"
   },
   "devDependencies": {
+    "@playwright/test": "^1.45.1",
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
