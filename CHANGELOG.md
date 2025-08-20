@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.7.0 - Feature Planning
+*Date: 2024-08-01*
+
+### Added
+- [PLAN] Added feature: Credit Card Management
+
+---
+
 ## v0.6.0 - Testing & Linting Framework
 *Date: 2024-07-30*
 

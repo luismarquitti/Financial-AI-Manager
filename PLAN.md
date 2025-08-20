@@ -147,6 +147,37 @@ This document is the single source of truth for the development plan, tracking a
 
 ---
 
+## Feature: Credit Card Management
+
+-   **Status:** Not Started
+-   **Description:** As a user, I want to manage my credit cards by tracking their specific closing and due dates. I need to see the current statement balance, a list of future/unpaid transactions, and ensure that credit card payments are properly integrated into my overall financial picture.
+-   **Key Requirements & Acceptance Criteria:**
+    -   **Data Model:**
+        -   Credit Cards will be a special type of "Account", distinguished by an `account_type` field.
+        -   Credit Card accounts will have additional properties: `closing_day` (day of the month) and `payment_due_day` (day of the month).
+        -   Credit Card payments must be recorded as "Transfer" transactions from a liquid account (e.g., Checking) to the Credit Card account.
+    -   **Settings UI:**
+        -   In the Settings > Accounts section, users can create or edit an account and specify its type as "Credit Card".
+        -   When "Credit Card" type is selected, input fields for "Closing Day" and "Payment Due Day" must become visible and required.
+    -   **Transaction Entry:**
+        -   When adding an expense transaction, the user must be able to select a Credit Card as the payment source from the "Account" dropdown.
+        -   The transaction form must include an option for installment purchases.
+        -   The user must be able to input the number of installments for a purchase. The system will automatically calculate and generate all future installment transactions, dated one month apart and linked together.
+    -   **Credit Card Detail View:**
+        -   A new dedicated view will be accessible for each credit card to see its specific dashboard.
+        -   This view must display a list of transactions for the current open statement (i.e., transactions between the last closing day and the next closing day).
+        -   It must show the total balance for the current statement, including a category breakdown chart.
+        -   It must display a historical chart of the last 12 closed statement totals.
+        -   It must provide a list of upcoming future statements, showing the installment transactions scheduled for each period.
+-   **Dependencies:**
+    -   Feature: Full-Stack Migration (PERN + GraphQL)
+    -   Feature: Transaction Management
+-   **Potential Enhancements:**
+    -   Automatic reminders for upcoming payment due dates.
+    -   Charts showing credit card debt over time.
+
+---
+
 ### Quality, Operations & Future AI
 
 ---
