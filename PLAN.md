@@ -1,220 +1,206 @@
-### **Project Plan & Status**
+# Project Plan: Financial AI Manager
 
-#### **Phase 1: Project Setup & Backend Foundation**
-**Status: ✅ COMPLETE**
-
--   [x] **Directory Structure**: Created a Yarn Workspace monorepo with `packages/client` and `packages/server`.
--   [x] **Database Setup (PostgreSQL)**: Added a `docker-compose.yml` for a local Postgres instance, defined the schema, and created a seeding script.
--   [x] **Backend API (GraphQL & Apollo Server)**: Initialized the Node/Express/TypeScript server with a basic Apollo Server setup and a health-check endpoint.
--   [x] **Tooling**: Configured root-level scripts to run the entire stack concurrently.
-
-#### **Phase 2: Backend API Implementation & Frontend Migration**
-**Status: ✅ COMPLETE**
-
--   [x] **Build out GraphQL API**: Expanded the GraphQL schema with all necessary types, queries, and mutations for transactions, accounts, and categories.
--   [x] **Implement Resolvers**: Implemented the resolver functions to perform CRUD operations against the PostgreSQL database.
--   [x] **Secure Gemini Integration**: Moved the Gemini API logic to a dedicated resolver on the server, ensuring the API key remains secure.
--   [x] **Integrate Apollo Client**: Added `@apollo/client` to the `client` package and configured the `ApolloProvider`.
--   [x] **Refactor Frontend Data Fetching**: Replaced all functions in `services/apiService.ts` and `services/geminiService.ts` with GraphQL operations using Apollo Client hooks (`useQuery`, `useMutation`).
--   [x] **Service Cleanup**: Removed the now-redundant mock service files (`apiService.ts`, `geminiService.ts`) from the client.
-
-#### **Phase 3: Documentation & Deployment**
-**Status: ✅ COMPLETE**
--   [x] **Dockerfile**: Created a multi-stage `Dockerfile` for containerizing the backend service.
--   [x] **Technical Documentation**: Added `docs/README.md` with a detailed overview of the project architecture and local setup instructions.
--   [x] **Deployment Guide**: Added `docs/DEPLOYMENT_GUIDE_GCP.md` with comprehensive steps for deploying the entire application stack to Google Cloud Platform.
--   [x] **Cost Estimation**: Enhanced the GCP deployment guide with a detailed cost breakdown and free tier analysis for all required services.
--   [x] **Enhanced Local Dev Docs**: Improved the local development setup guide with detailed Docker instructions for Windows and a robust `docker-compose.yml`.
-
-#### **Phase 4: Unit Tests and Linting**
-**Status: IN PROGRESS**
-
--   **Goal**: Establish a robust code quality and testing framework to ensure code consistency, prevent errors, and improve long-term maintainability. This involves integrating ESLint for static analysis, Prettier for automated code formatting, and Jest with React Testing Library for unit/component testing across both frontend and backend packages.
+This document is the single source of truth for the development plan, tracking all features from conception to completion.
 
 ---
 
-##### **Part 1: Linting and Formatting (ESLint + Prettier)**
-**Status: ✅ COMPLETE**
-1.  **[x] Dependency Installation**: Add all necessary ESLint and Prettier packages to the root `package.json`.
-2.  **[x] Configuration**:
-    -   [x] Create a root `.eslintrc.json` for shared TypeScript rules.
-    -   [x] Create workspace-specific `.eslintrc.json` files in `client` (for React) and `server` (for Node).
-    -   [x] Create root `.prettierrc` and `.prettierignore` files for consistent code style.
-3.  **[x] Script Integration**: Add `lint`, `lint:fix`, and `format` scripts to the root `package.json` to run these tools across the entire monorepo.
+### Foundational & Core Features
 
 ---
 
-##### **Part 2: Unit Testing Framework (Jest + React Testing Library)**
-**Status: ✅ COMPLETE**
-1.  **[x] Dependency Installation**: Add Jest, `ts-jest`, and other testing-related packages to the root and workspace `package.json` files.
-2.  **[x] Configuration**:
-    -   [x] Create a root `jest.config.js` to manage the testing environment for the monorepo.
-    -   [x] Create `packages/client/jest.setup.js` to configure `@testing-library/jest-dom`.
-3.  **[x] Example Tests**:
-    -   **[x] Client**: Implement a basic component test for `SummaryCard.tsx` to validate rendering.
-    -   **[x] Server**: Implement a unit test for a function in `dbService.ts`, demonstrating how to mock database dependencies.
-4.  **[x] Script Integration**: Add `test`, `test:watch`, and `test:coverage` scripts to the root `package.json`.
+## Feature: Full-Stack Migration (PERN + GraphQL)
+
+-   **Status:** Completed
+-   **Description:** Migrate the application from a client-side only demo to a full-stack architecture using PostgreSQL, Express, React, and Node (PERN stack) with a GraphQL API. This establishes a robust and scalable foundation for all future development.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] Establish a Yarn Workspaces monorepo for client/server packages.
+    -   [x] Set up a local PostgreSQL database using Docker.
+    -   [x] Create a database schema and seeding script.
+    -   [x] Implement a Node/Express backend server with Apollo Server.
+    -   [x] Build a complete GraphQL API for all CRUD operations.
+    -   [x] Move the Gemini API integration to the backend server.
+    -   [x] Integrate Apollo Client into the React frontend and refactor all data fetching.
+-   **Dependencies:** None.
+-   **Potential Enhancements:**
+    -   Implement GraphQL Subscriptions for real-time data updates.
+    -   Introduce caching strategies (e.g., Redis) to reduce database load.
 
 ---
 
-##### **Part 3: Comprehensive Component Test Plan**
-**Status: IN PROGRESS**
-- **Goal**: Create a comprehensive test plan for all React components to ensure application correctness and reliability, focusing on user-centric testing principles with React Testing Library.
+## Feature: Application Core & Navigation
+
+-   **Status:** Completed
+-   **Description:** As a user, I need a consistent and intuitive navigation structure to move between the different sections of the application, such as the Dashboard, Transactions, and Settings.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] A persistent sidebar is present on the left side of the screen.
+    -   [x] The sidebar contains clear, icon-based navigation buttons for all main pages.
+    -   [x] The currently active page is visually highlighted in the sidebar.
+    -   [x] Navigation buttons are disabled until data is loaded to prevent navigating to empty states.
+    -   [x] A "Reset" button is available to clear all data and return to the initial state.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+-   **Potential Enhancements:**
+    -   Add keyboard shortcuts for quick navigation between pages.
+    -   Implement a responsive mobile-friendly navigation (e.g., a collapsible hamburger menu).
 
 ---
 
-1.  **[ ] Presentational Components**
-    -   **[ ] `SummaryCard.tsx`**: Verify correct rendering of props (`title`, `value`, `icon`) and dynamic styles based on the `color` prop.
+## Feature: Data Input & Onboarding
 
-2.  **[ ] Interactive Components**
-    -   **[ ] `TransactionTable.tsx`**:
-        -   [ ] Test correct rendering of transaction data.
-        -   [ ] Test pagination logic (button states, item slicing).
-        -   [ ] Test column sorting functionality.
-        -   [ ] Test conditional rendering of "Actions" and selection checkboxes.
-        -   [ ] Test that user interactions (edit, delete, select) correctly trigger callback props.
-    -   **[ ] `TransactionModal.tsx`**:
-        -   [ ] Test both "Add" and "Edit" modes.
-        -   [ ] Test user input updates form state.
-        -   [ ] Test form submission logic, including validation and calling `onSave` prop.
-        -   [ ] Test modal closing behavior.
-    -   **[ ] `SettingsList.tsx`**:
-        -   [ ] Test rendering of items.
-        -   [ ] Test "add", "update", and "delete" user flows, ensuring callbacks are fired correctly.
-        -   [ ] Test duplicate item validation.
-
-3.  **[ ] Page-Level & Integration Tests (with Apollo Mocking)**
-    -   **[ ] `DataInput.tsx`**:
-        -   [ ] Test tab switching.
-        -   [ ] Test that data source selection buttons trigger the correct callbacks.
-        -   [ ] Test loading state disables interaction.
-    -   **[ ] `TransactionsPage.tsx`**:
-        -   [ ] Test that all filters (search, dropdowns, date range) correctly reduce the dataset passed to the table.
-        -   [ ] Test that the "Filtered Summary" section updates in response to filtering.
-        -   [ ] Test the "Reset Filters" functionality.
-    -   **[ ] `ImportPage.tsx`**:
-        -   [ ] Test selection logic and its effect on the "Save" button state.
-        -   [ ] Test that `onSave` is called with the correctly filtered list of transactions.
-    -   **[ ] `Dashboard.tsx`**:
-        -   [ ] Test rendering of the loading skeleton.
-        -   [ ] Test rendering of all data-driven sections (`SummaryCard`, AI summary, charts) with mock data.
-        -   [ ] Test account filter dropdown interaction.
-    -   **[ ] `App.tsx`**:
-        -   [ ] Test initial page render.
-        -   [ ] Test high-level user flows: loading data, navigating between pages via sidebar, and opening/closing the transaction modal.
-
-#### **Phase 5: AI-Enhancement - AI-Powered Transaction Categorization**
-**Status: TO-DO**
-
--   **Goal**: Significantly reduce manual data entry by automatically suggesting categories for uncategorized transactions during the file import process.
-
--   **High-Level Workflow**: The user uploads a file, navigates to the "Import" page, and clicks a "✨ Suggest Categories" button. The application sends the descriptions of all uncategorized transactions to the backend. The backend uses the Gemini API to determine the best category for each transaction and sends the suggestions back. The frontend then automatically populates the "Category" dropdown for each of those transactions, allowing the user to quickly review, adjust if necessary, and save.
+-   **Status:** Completed
+-   **Description:** As a new user, I can easily get started by either connecting to the pre-populated database or by uploading my own transaction file.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] The initial screen presents two clear options: "Connect to Database" and "Import File".
+    -   [x] Clicking "Connect to Database" fetches all data and navigates to the Dashboard.
+    -   [x] The "Import File" option provides a drag-and-drop zone or file selector for `.csv` and `.xlsx` files.
+    -   [x] A loading indicator is displayed while data is being fetched or a file is being processed.
+    -   [x] Clear error messages are shown if the connection fails or the file is invalid.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
 
 ---
 
-##### **Part 1: Backend Implementation (GraphQL & Gemini Service)**
-**Status: ✅ COMPLETE**
-
-1.  **[x] GraphQL Schema Enhancement**:
-    -   [x] Define a new mutation in `packages/server/src/graphql/schema.ts`:
-        ```graphql
-        suggestCategories(transactions: [SuggestTransactionCategoryInput!]!): [SuggestedCategory!]!
-        ```
-    -   [x] Create the required input and output types:
-        ```graphql
-        input SuggestTransactionCategoryInput {
-          id: String! # A temporary ID from the client (e.g., 'import-1')
-          description: String!
-        }
-
-        type SuggestedCategory {
-          transactionId: String!
-          categoryId: ID!
-          categoryName: String!
-        }
-        ```
-
-2.  **[x] New Gemini Service Logic**:
-    -   [x] In `packages/server/src/services/geminiService.ts`, create a new exported function: `suggestTransactionCategories`.
-    -   [x] This function will accept two arguments: an array of transaction objects (`{ id, description }`) and an array of all available user-defined categories (`{ id, name }`).
-    -   [x] It will construct a highly specific prompt for the `gemini-2.5-flash` model. The prompt will instruct the AI to act as a financial assistant and match each transaction description to one of the provided category names.
-    -   [x] Crucially, it will use a `responseSchema` to enforce a strict JSON output, ensuring the response is always parseable. The schema will define an array of objects, like:
-        ```json
-        // responseSchema example
-        {
-          type: Type.ARRAY,
-          items: {
-            type: Type.OBJECT,
-            properties: {
-              transactionId: { type: Type.STRING },
-              categoryName: { type: Type.STRING }
-            }
-          }
-        }
-        ```
-
-3.  **[x] Resolver Implementation**:
-    -   [x] In `packages/server/src/graphql/resolvers.ts`, implement the resolver for the `suggestCategories` mutation.
-    -   [x] The resolver will first call the `dbService` to fetch all existing categories from the database.
-    -   [x] It will then pass the input transactions and the fetched categories to the new `geminiService.suggestTransactionCategories` function.
-    -   [x] Finally, it will process the AI's response, mapping the suggested `categoryName` for each transaction back to its corresponding category `id` from the database before returning the `SuggestedCategory` array.
+### User-Facing Features
 
 ---
 
-##### **Part 2: Frontend Implementation (React & Apollo Client)**
-**Status: TO-DO**
+## Feature: Financial Dashboard
 
-1.  **[ ] UI Enhancements in `ImportPage.tsx`**:
-    -   Add a new, visually distinct button: `✨ Suggest Categories`.
-    -   This button will have loading and disabled states managed by a new state variable (e.g., `isSuggestingCategories`).
-
-2.  **[ ] Apollo Client Mutation**:
-    -   Define the `SUGGEST_CATEGORIES` mutation in `packages/client/src/graphql/queries.ts`.
-    -   In `ImportPage.tsx`, create a `useMutation` hook for this new mutation.
-
-3.  **[ ] State Management & Logic**:
-    -   The `onClick` handler for the "Suggest Categories" button will:
-        1.  Filter the `stagedTransactions` state to get a list of all transactions that do not currently have a `category` assigned.
-        2.  Call the `suggestCategories` mutation with the filtered list, sending only the `id` and `description`.
-        3.  When the mutation returns the suggestions, update the `stagedTransactions` state. It will iterate through the suggestions and find the matching transaction in the state by its `id`, then update its `category` object with the suggested `{ id, name }`.
-
-4.  **[ ] Editable `TransactionTable.tsx`**:
-    -   The "Category" and "Account" columns on the import page need to be interactive.
-    -   Modify the `TransactionTable.tsx` component. When a new prop `isEditable` is true, the cells for `category` and `account` will render as `<select>` dropdowns instead of static text.
-    -   The `ImportPage.tsx` will be responsible for handling the `onChange` events for these dropdowns and updating the `stagedTransactions` state accordingly.
-    -   A small "✨" icon will be displayed next to the category name if it was suggested by the AI (this requires adding a temporary flag to the transaction state object).
+-   **Status:** Completed
+-   **Description:** As a user, I can view a comprehensive, high-level dashboard that summarizes my financial health and visualizes key trends.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] Dashboard displays key metrics in summary cards: Total Income, Total Expenses, and Net Savings.
+    -   [x] An "AI Financial Analyst" section displays the summary generated by the Gemini API.
+    -   [x] A bar chart visualizes monthly income vs. expenses over time.
+    -   [x] A pie chart shows the breakdown of expenses by category.
+    -   [x] Users can filter the entire dashboard view by a specific account using a dropdown menu.
+    -   [x] A paginated table shows a preview of all transactions for the selected account.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+-   **Potential Enhancements:**
+    -   Add a global date-range filter to the dashboard to analyze specific periods.
+    -   Allow users to customize the dashboard layout (e.g., hide or reorder widgets).
+    -   Introduce budgeting goals with progress bars.
 
 ---
 
-##### **Part 3: User Workflow & Experience**
-**Status: TO-DO**
+## Feature: AI-Powered Financial Summary
 
-1.  **[ ] End-to-End Flow**:
-    -   User uploads a CSV/XLSX file.
-    -   The `ImportPage` displays the staged transactions, many with empty category/account dropdowns.
-    -   User clicks "✨ Suggest Categories". A loading indicator appears on the button.
-    -   After a few moments, the "Category" dropdown for the relevant rows automatically selects the AI's suggestions.
-    -   The user can now review the suggestions, manually override any they disagree with using the dropdown, and assign categories to any that the AI missed.
-    -   The user clicks "Save Selected to Database" to finalize the import.
-
-2.  **[ ] Feedback & Error Handling**:
-    -   Implement clear loading states on the suggestion button and potentially a subtle loading indicator on the table rows being processed.
-    -   Gracefully handle any potential API errors from the Gemini service and display a user-friendly notification (e.g., a toast or an alert message) if the categorization fails.
+-   **Status:** Completed
+-   **Description:** As a user, I can receive an automated, intelligent analysis of my financial data, providing a narrative summary and actionable advice without manual effort.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] The backend securely calls the Gemini API with the user's transaction data.
+    -   [x] The prompt sent to the AI is well-structured and asks for a specific JSON output.
+    -   [x] The Gemini API response is parsed and displayed in a dedicated "AI Financial Analyst" section on the dashboard.
+    -   [x] The analysis includes an overall summary, income analysis, expense analysis, and a list of actionable insights.
+    -   [x] A clear loading state is displayed while the AI analysis is in progress.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+-   **Potential Enhancements:**
+    -   Allow users to ask follow-up questions about their summary in a chat-like interface.
+    -   Generate comparative analyses (e.g., "How does this month compare to last month?").
 
 ---
 
-### **🌟 Future Enhancements (Next Steps)**
+## Feature: Transaction Management
 
-With the core full-stack architecture now in place, the application is ready for powerful new features. The following enhancements are recommended:
+-   **Status:** Completed
+-   **Description:** As a user, I can view, search, and manage all of my financial transactions in a detailed and organized manner.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] A dedicated "Transactions" page displays all transactions in a sortable, paginated table.
+    -   [x] Users can add a new transaction via a modal form.
+    -   [x] Users can edit an existing transaction via the same modal form.
+    -   [x] Users can delete a transaction with a confirmation prompt.
+    -   [x] Powerful filtering options are available: search by description, filter by type (income/expense), filter by category, and select a date range.
+    -   [x] A summary section shows the total income and expenses for the currently filtered results.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+-   **Potential Enhancements:**
+    -   Implement bulk editing (e.g., select multiple transactions and re-categorize all at once).
+    -   Add the ability to split a single transaction into multiple categories.
 
-1.  **User Authentication**:
-    *   **Goal**: Secure the application and provide a personalized experience for multiple users.
-    *   **Implementation Idea**: Implement a JWT (JSON Web Token) based authentication system. This would involve adding `User` tables to the database, creating `signup` and `login` mutations in the GraphQL API, and managing the user's authentication state on the client. All API requests would then be protected, ensuring users can only access their own financial data.
+---
 
-2.  **Real-Time Notifications & Alerts**:
-    *   **Goal**: Proactively inform users about important financial events.
-    *   **Implementation Idea**: Use GraphQL Subscriptions to push real-time updates from the server to the client. This could be used for features like "Large Expense Alerts" or "Upcoming Bill Reminders".
+## Feature: File Import & Staging
 
-3.  **Data Persistence for Client-Side State**:
-    *   **Goal**: Improve user experience by remembering filters and UI state between sessions.
-    *   **Implementation Idea**: While the core data is persistent, UI state (like selected filters on the Transactions page) is not. Use a library like `apollo-link-state` or `localStorage` to persist these client-side view preferences.
+-   **Status:** Completed
+-   **Description:** As a user, I can upload a transaction file and review, edit, and selectively import the data, ensuring data accuracy before it's saved.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] The application can parse `.csv` and `.xlsx` files with flexible column headers.
+    -   [x] Parsed transactions are displayed on a dedicated "Import" page.
+    -   [x] Users can select or deselect transactions to be imported using checkboxes.
+    -   [x] Users can add, edit, or delete transactions in the staging area before the final import.
+    -   [x] Clicking "Save Selected to Database" saves only the checked transactions and navigates to the dashboard.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+
+---
+
+## Feature: Settings Management
+
+-   **Status:** Completed
+-   **Description:** As a user, I can customize the application by managing my own lists of financial accounts and spending categories.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] A dedicated "Settings" page is available.
+    -   [x] Users can add a new category or account.
+    -   [x] Users can rename an existing category or account.
+    -   [x] Users can delete a category or account with a confirmation prompt.
+    -   [x] Changes are reflected across the application (e.g., in transaction dropdowns).
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+-   **Potential Enhancements:**
+    -   Add the ability to assign a color to each category for better visualization in charts.
+    -   Allow users to set monthly budgets for each category.
+
+---
+
+### Quality, Operations & Future AI
+
+---
+
+## Feature: Code Quality Framework: Linting & Testing
+
+-   **Status:** Completed
+-   **Description:** As a developer, I want a robust code quality and testing framework to ensure code consistency, prevent errors, and improve long-term maintainability.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] ESLint is integrated for static code analysis.
+    -   [x] Prettier is integrated for automated code formatting.
+    -   [x] Jest and React Testing Library are integrated for unit and component testing.
+    -   [x] Root-level scripts (`lint`, `format`, `test`) are available.
+    -   [x] Example tests for both frontend and backend are implemented.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
+
+---
+
+## Feature: Comprehensive Component Test Coverage
+
+-   **Status:** In Progress
+-   **Description:** As a developer, I want all React components and key backend services to have comprehensive tests to ensure the application is reliable and free of regressions.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [ ] Test all presentational components for correct prop rendering.
+    -   [ ] Test all interactive components, including user events and callback triggers.
+    -   [ ] Test page-level components with mocked Apollo Client data to verify integration.
+    -   [ ] Test high-level application flows, such as navigation and modal interactions.
+    -   [ ] Achieve a target of >80% test coverage for all critical services and components.
+-   **Dependencies:** Feature: Code Quality Framework: Linting & Testing.
+
+---
+
+## Feature: AI-Powered Transaction Categorization
+
+-   **Status:** Not Started
+-   **Description:** As a user importing a transaction file, I want the application to automatically suggest a category for each transaction based on its description, significantly reducing the manual effort required for data entry.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [ ] A "Suggest Categories" button is added to the Import page.
+    -   [ ] Clicking the button sends uncategorized transaction descriptions to the Gemini API.
+    -   [ ] The AI returns a suggested category for each transaction from the user's existing list.
+    -   [ ] Category dropdowns in the import table are automatically populated with the AI's suggestions.
+    -   [ ] The user can review and override any AI suggestion before saving.
+    -   [ ] A clear loading state is shown while the AI is processing the request.
+-   **Dependencies:** Feature: File Import & Staging.
+
+---
+
+## Feature: Production Readiness: Documentation & GCP Deployment
+
+-   **Status:** Completed
+-   **Description:** As a developer, I need comprehensive documentation and a clear deployment path to get the application running in a production environment on Google Cloud Platform.
+-   **Key Requirements & Acceptance Criteria:**
+    -   [x] A multi-stage `Dockerfile` for containerizing the backend service is created.
+    -   [x] Technical documentation covering the project architecture and local setup is written.
+    -   [x] A step-by-step deployment guide for GCP (Cloud SQL, Cloud Run, Cloud Storage) is available.
+    -   [x] The deployment guide includes a detailed cost estimation and free tier analysis.
+-   **Dependencies:** Feature: Full-Stack Migration (PERN + GraphQL).
