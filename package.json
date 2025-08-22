@@ -14,7 +14,8 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "deploy": "yarn build && firebase deploy --only hosting"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
