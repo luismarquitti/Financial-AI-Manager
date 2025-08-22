@@ -7,6 +7,7 @@ import { Dashboard } from './components/Dashboard';
 import { TransactionsPage } from './pages/TransactionsPage';
 import { ImportPage } from './pages/ImportPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { PerformancePage } from './pages/PerformancePage';
 import { TransactionModal } from './components/TransactionModal';
 import { parseFile } from './utils/fileParser';
 import { analyzeTransactions } from './utils/dataAnalyzer';
@@ -19,7 +20,7 @@ import {
     ADD_TRANSACTION, UPDATE_TRANSACTION, DELETE_TRANSACTION, SAVE_TRANSACTIONS
 } from './graphql/queries';
 
-type Page = 'input' | 'dashboard' | 'transactions' | 'import' | 'settings';
+type Page = 'input' | 'dashboard' | 'transactions' | 'import' | 'settings' | 'performance';
 
 const App: React.FC = () => {
   const [stagedTransactions, setStagedTransactions] = useState<Transaction[]>([]);
@@ -256,6 +257,8 @@ const App: React.FC = () => {
           onUpdateAccount={accountHandlers.handleUpdate}
           onDeleteAccount={accountHandlers.handleDelete}
         />;
+      case 'performance':
+        return <PerformancePage />;
       case 'input':
       default:
         return <DataInput onFileSelect={handleFileSelect} onFetchFromDb={handleFetchFromDb} isLoading={isLoading && !isInitialized} />;
@@ -287,6 +290,7 @@ const App: React.FC = () => {
              <NavButton page="transactions" label="Transactions" icon={<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>}/>
              <NavButton page="import" label="Import" icon={<ImportIcon/>}/>
              <NavButton page="settings" label="Settings" icon={<SettingsIcon/>}/>
+             <NavButton page="performance" label="Performance" icon={<DatabaseIcon className="w-5 h-5" />} />
         </nav>
         <div className="mt-auto">
             <button onClick={handleReset} className="text-gray-400 hover:text-danger text-xs flex flex-col items-center gap-1">
