@@ -3,7 +3,7 @@ import type { Transaction } from '../types';
 import { SortAscIcon, SortDescIcon, EditIcon, TrashIcon } from './Icons';
 
 type SortableTransactionKeys = 'date' | 'description' | 'amount';
-type SortKey = 'date' | 'description' | 'amount' | 'category' | 'account';
+type SortKey = 'date' | 'description' | 'amount' | 'category' | 'account' | 'total';
 type SortDirection = 'asc' | 'desc';
 
 interface TransactionTableProps {
@@ -42,6 +42,9 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
         } else if (sortConfig.key === 'account') {
           valA = a.account?.name;
           valB = b.account?.name;
+        } else if (sortConfig.key === 'total') {
+          valA = a.amount;
+          valB = b.amount;
         } else {
           valA = a[sortConfig.key as SortableTransactionKeys];
           valB = b[sortConfig.key as SortableTransactionKeys];
@@ -93,7 +96,8 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
     { key: 'description', label: 'Description' },
     { key: 'category', label: 'Category' },
     { key: 'account', label: 'Account' },
-    { key: 'amount', label: 'Amount' }
+    { key: 'amount', label: 'Amount' },
+    { key: 'total', label: 'Total' }
   ];
 
   const handleSelectAll = (e: ChangeEvent<HTMLInputElement>) => {
@@ -150,6 +154,9 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{transaction.description}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{transaction.category?.name ?? 'N/A'}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{transaction.account?.name ?? 'N/A'}</td>
+                <td className={`px-6 py-4 whitespace-nowrap text-sm font-medium ${transaction.amount > 0 ? 'text-secondary' : 'text-danger'}`}>
+                  {formatCurrency(transaction.amount)}
+                </td>
                 <td className={`px-6 py-4 whitespace-nowrap text-sm font-medium ${transaction.amount > 0 ? 'text-secondary' : 'text-danger'}`}>
                   {formatCurrency(transaction.amount)}
                 </td>
