@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { TrashIcon, EditIcon, PlusIcon, CheckIcon } from './Icons';
 
 interface Item {
@@ -17,15 +18,18 @@ interface SettingsListProps {
 }
 
 export const SettingsList: React.FC<SettingsListProps> = ({ title, items, onAddItem, onUpdateItem, onDeleteItem, itemName }) => {
+  const { t } = useTranslation();
   const [newItem, setNewItem] = useState('');
   const [editingItem, setEditingItem] = useState<{ id: string, oldName: string; newName: string } | null>(null);
   const [error, setError] = useState('');
+
+  const translatedItemName = t(`common.${itemName}`);
 
   const handleAddItem = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newItem.trim()) return;
     if (items.some(i => i.name.toLowerCase() === newItem.trim().toLowerCase())) {
-      setError(`This ${itemName} already exists.`);
+      setError(t('settingsList.errorExists', { itemName: translatedItemName }));
       return;
     }
     setError('');
@@ -40,7 +44,7 @@ export const SettingsList: React.FC<SettingsListProps> = ({ title, items, onAddI
         return;
     }
     if (items.some(i => i.name.toLowerCase() === editingItem.newName.trim().toLowerCase() && i.id !== editingItem.id)) {
-      setError(`This ${itemName} already exists.`);
+      setError(t('settingsList.errorExists', { itemName: translatedItemName }));
       return;
     }
     setError('');
@@ -49,7 +53,7 @@ export const SettingsList: React.FC<SettingsListProps> = ({ title, items, onAddI
   };
   
   const handleDeleteItem = (id: string) => {
-    if(window.confirm(`Are you sure you want to delete this ${itemName}? This may affect existing transactions.`)) {
+    if(window.confirm(t('settingsList.deleteConfirm', { itemName: translatedItemName }))) {
         onDeleteItem(id);
     }
   }
@@ -62,11 +66,11 @@ export const SettingsList: React.FC<SettingsListProps> = ({ title, items, onAddI
           type="text"
           value={newItem}
           onChange={(e) => { setNewItem(e.target.value); setError(''); }}
-          placeholder={`Add new ${itemName}...`}
+          placeholder={t('settingsList.addPlaceholder', { itemName: translatedItemName })}
           className="flex-grow block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
         />
         <button type="submit" className="px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-indigo-700 flex items-center gap-1">
-          <PlusIcon /> Add
+          <PlusIcon /> {t('settingsList.add')}
         </button>
       </form>
 
@@ -110,7 +114,7 @@ export const SettingsList: React.FC<SettingsListProps> = ({ title, items, onAddI
           </div>
         ))}
         {items.length === 0 && (
-            <p className="text-center text-gray-500 py-4">No {itemName}s found.</p>
+            <p className="text-center text-gray-500 py-4">{t('settingsList.noItems', { itemName: t(`common.${itemName}s`) })}</p>
         )}
       </div>
     </div>

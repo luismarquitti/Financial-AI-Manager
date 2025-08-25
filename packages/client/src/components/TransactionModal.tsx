@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Transaction, Category, Account } from '../types';
 
 interface TransactionModalProps {
@@ -19,6 +20,7 @@ const initialFormState = {
 };
 
 export const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onClose, onSave, transaction, categories, accounts }) => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState<string | null>(null);
 
@@ -53,27 +55,27 @@ export const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onCl
 
     const amount = parseFloat(formData.amount.toString());
     if (isNaN(amount)) {
-        setError('Amount must be a valid number.');
+        setError(t('transactionModal.errorAmount'));
         return;
     }
 
     if (!formData.description.trim()) {
-        setError('Description is required.');
+        setError(t('transactionModal.errorDescription'));
         return;
     }
     
     if (!formData.date) {
-        setError('Date is required.');
+        setError(t('transactionModal.errorDate'));
         return;
     }
     
     if (!formData.category) {
-        setError('Category is required.');
+        setError(t('transactionModal.errorCategory'));
         return;
     }
 
     if (!formData.account) {
-        setError('Account is required.');
+        setError(t('transactionModal.errorAccount'));
         return;
     }
 
@@ -95,7 +97,7 @@ export const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onCl
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center" aria-modal="true" role="dialog">
       <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md m-4">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">{transaction ? 'Edit Transaction' : 'Add Transaction'}</h2>
+          <h2 className="text-2xl font-bold text-gray-800">{transaction ? t('transactionModal.titleEdit') : t('transactionModal.titleAdd')}</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-3xl leading-none">&times;</button>
         </div>
 
@@ -107,26 +109,26 @@ export const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onCl
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="date" className="block text-sm font-medium text-gray-700">Date</label>
+            <label htmlFor="date" className="block text-sm font-medium text-gray-700">{t('common.date')}</label>
             <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
           </div>
           <div>
-            <label htmlFor="description" className="block text-sm font-medium text-gray-700">Description</label>
+            <label htmlFor="description" className="block text-sm font-medium text-gray-700">{t('common.description')}</label>
             <input type="text" id="description" name="description" value={formData.description} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
           </div>
           <div>
-            <label htmlFor="amount" className="block text-sm font-medium text-gray-700">Amount</label>
+            <label htmlFor="amount" className="block text-sm font-medium text-gray-700">{t('common.amount')}</label>
             <input type="number" step="0.01" id="amount" name="amount" value={formData.amount} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
-            <p className="text-xs text-gray-500 mt-1">Use a negative value for expenses (e.g., -50.25).</p>
+            <p className="text-xs text-gray-500 mt-1">{t('transactionModal.amountHint')}</p>
           </div>
           <div>
-            <label htmlFor="category" className="block text-sm font-medium text-gray-700">Category</label>
+            <label htmlFor="category" className="block text-sm font-medium text-gray-700">{t('common.category')}</label>
             <select id="category" name="category" value={formData.category} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                 {categories.map(cat => <option key={cat.id} value={cat.id}>{cat.name}</option>)}
             </select>
           </div>
           <div>
-            <label htmlFor="account" className="block text-sm font-medium text-gray-700">Account</label>
+            <label htmlFor="account" className="block text-sm font-medium text-gray-700">{t('common.account')}</label>
             <select id="account" name="account" value={formData.account} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                 {accounts.map(acc => <option key={acc.id} value={acc.id}>{acc.name}</option>)}
             </select>
@@ -134,10 +136,10 @@ export const TransactionModal: React.FC<TransactionModalProps> = ({ isOpen, onCl
 
           <div className="flex justify-end gap-4 pt-4">
             <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300">
-              Cancel
+              {t('common.cancel')}
             </button>
             <button type="submit" className="px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-indigo-700">
-              Save Transaction
+              {t('transactionModal.saveButton')}
             </button>
           </div>
         </form>

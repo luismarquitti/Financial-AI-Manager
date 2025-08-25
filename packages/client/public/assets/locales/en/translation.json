@@ -1,0 +1,108 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "cancel": "Cancel",
+    "save": "Save",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "reset": "Reset",
+    "all": "All",
+    "income": "Income",
+    "expense": "Expense",
+    "category": "Category",
+    "categories": "Categories",
+    "account": "Account",
+    "accounts": "Accounts",
+    "date": "Date",
+    "description": "Description",
+    "amount": "Amount",
+    "actions": "Actions"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "import": "Import",
+    "settings": "Settings"
+  },
+  "dataInput": {
+    "title": "Welcome to Financial AI Manager",
+    "subtitle": "Get started by connecting to the database or importing your transaction data from a file.",
+    "connectTab": "Connect to Database",
+    "importTab": "Import File",
+    "connectTitle": "Connect & Manage Your Data",
+    "connectSubtitle": "Load data from the database to enable full CRUD operations and interactive analysis.",
+    "connecting": "Connecting...",
+    "connectButton": "Connect & Fetch Transactions",
+    "uploadTitle": "Click to upload",
+    "uploadSubtitle": "or drag and drop",
+    "uploadHint": "CSV or XLSX file",
+    "processing": "Processing file..."
+  },
+  "dashboard": {
+    "title": "Financial Overview",
+    "analysisFor": "Analysis for:",
+    "filterByAccount": "Filter by Account",
+    "totalIncome": "Total Income",
+    "totalExpenses": "Total Expenses",
+    "netSavings": "Net Savings",
+    "aiTitle": "AI Financial Analyst",
+    "aiLoading": "Gemini is analyzing your data...",
+    "aiError": "Could not generate AI summary.",
+    "incomeAnalysis": "Income Analysis",
+    "expenseAnalysis": "Expense Analysis",
+    "actionableInsights": "Actionable Insights",
+    "monthlyChartTitle": "Monthly Income vs. Expenses",
+    "categoryChartTitle": "Expense Categories",
+    "transactionsTitle": "All Transactions"
+  },
+  "transactionsPage": {
+    "title": "Transactions",
+    "subtitle": "Manage and review all your financial transactions.",
+    "addTransaction": "Add Transaction",
+    "searchPlaceholder": "e.g., Coffee shop...",
+    "searchLabel": "Search Description",
+    "typeLabel": "Type",
+    "resetFilters": "Reset Filters",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "filteredSummary": "Filtered Summary"
+  },
+  "importPage": {
+    "title": "Review & Import Transactions",
+    "subtitle": "Select, edit, and confirm transactions before saving to the database.",
+    "saving": "Saving...",
+    "saveButton": "Save Selected ({{count}}) to Database",
+    "stagedTitle": "Staged Transactions ({{count}})",
+    "addTransaction": "Add Transaction"
+  },
+  "settingsPage": {
+    "title": "Settings",
+    "subtitle": "Manage your transaction categories and accounts."
+  },
+  "settingsList": {
+    "addPlaceholder": "Add new {{itemName}}...",
+    "add": "Add",
+    "errorExists": "This {{itemName}} already exists.",
+    "deleteConfirm": "Are you sure you want to delete this {{itemName}}? This may affect existing transactions.",
+    "noItems": "No {{itemName}}s found."
+  },
+  "transactionModal": {
+    "titleEdit": "Edit Transaction",
+    "titleAdd": "Add Transaction",
+    "errorAmount": "Amount must be a valid number.",
+    "errorDescription": "Description is required.",
+    "errorDate": "Date is required.",
+    "errorCategory": "Category is required.",
+    "errorAccount": "Account is required.",
+    "amountHint": "Use a negative value for expenses (e.g., -50.25).",
+    "saveButton": "Save Transaction"
+  },
+  "transactionTable": {
+    "noTransactions": "No transactions found.",
+    "pagination": "Showing {{start}} to {{end}} of {{total}} results",
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { SettingsList } from '../components/SettingsList';
 import type { Category, Account } from '../types';
 
@@ -15,6 +16,7 @@ interface SettingsPageProps {
 }
 
 export const SettingsPage: React.FC<SettingsPageProps> = (props) => {
+  const { t } = useTranslation();
   const {
     categories,
     accounts,
@@ -29,13 +31,13 @@ export const SettingsPage: React.FC<SettingsPageProps> = (props) => {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-3xl font-bold text-gray-800">Settings</h2>
-        <p className="text-text-secondary mt-1">Manage your transaction categories and accounts.</p>
+        <h2 className="text-3xl font-bold text-gray-800">{t('settingsPage.title')}</h2>
+        <p className="text-text-secondary mt-1">{t('settingsPage.subtitle')}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <SettingsList
-          title="Categories"
+          title={t('common.categories')}
           items={categories}
           onAddItem={onAddCategory}
           onUpdateItem={onUpdateCategory}
@@ -43,7 +45,7 @@ export const SettingsPage: React.FC<SettingsPageProps> = (props) => {
           itemName="category"
         />
         <SettingsList
-          title="Accounts"
+          title={t('common.accounts')}
           items={accounts}
           onAddItem={onAddAccount}
           onUpdateItem={onUpdateAccount}

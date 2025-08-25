@@ -1,4 +1,5 @@
 import React, { useState, useMemo, ChangeEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Transaction } from '../types';
 import { SortAscIcon, SortDescIcon, EditIcon, TrashIcon } from './Icons';
 
@@ -25,6 +26,7 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
   onSelectionChange = () => {},
   onSelectAll = () => {},
 }) => {
+  const { t } = useTranslation();
   const [sortConfig, setSortConfig] = useState<{ key: SortKey; direction: SortDirection } | null>({ key: 'date', direction: 'desc'});
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -89,11 +91,11 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
   };
   
   const headers: { key: SortKey, label: string }[] = [
-    { key: 'date', label: 'Date' },
-    { key: 'description', label: 'Description' },
-    { key: 'category', label: 'Category' },
-    { key: 'account', label: 'Account' },
-    { key: 'amount', label: 'Amount' }
+    { key: 'date', label: t('common.date') },
+    { key: 'description', label: t('common.description') },
+    { key: 'category', label: t('common.category') },
+    { key: 'account', label: t('common.account') },
+    { key: 'amount', label: t('common.amount') }
   ];
 
   const handleSelectAll = (e: ChangeEvent<HTMLInputElement>) => {
@@ -128,7 +130,7 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
               ))}
                {showActions && (
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-text-secondary uppercase tracking-wider">
-                  Actions
+                  {t('common.actions')}
                 </th>
                )}
             </tr>
@@ -169,7 +171,7 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
             )) : (
               <tr>
                 <td colSpan={headers.length + (showActions ? 1 : 0) + (isSelectable ? 1 : 0)} className="text-center py-10 text-gray-500">
-                  No transactions found.
+                  {t('transactionTable.noTransactions')}
                 </td>
               </tr>
             )}
@@ -179,7 +181,11 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
        {totalPages > 1 && (
         <nav className="mt-4 flex items-center justify-between">
             <p className="text-sm text-gray-500">
-                Showing <span className="font-medium">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-medium">{Math.min(currentPage * itemsPerPage, sortedTransactions.length)}</span> of <span className="font-medium">{sortedTransactions.length}</span> results
+                {t('transactionTable.pagination', { 
+                  start: (currentPage - 1) * itemsPerPage + 1,
+                  end: Math.min(currentPage * itemsPerPage, sortedTransactions.length),
+                  total: sortedTransactions.length
+                })}
             </p>
             <div className="flex gap-2">
                 <button
@@ -187,14 +193,14 @@ export const TransactionTable: React.FC<TransactionTableProps> = ({
                     disabled={currentPage === 1}
                     className="px-3 py-1 border rounded-md text-sm disabled:opacity-50"
                 >
-                    Previous
+                    {t('transactionTable.previous')}
                 </button>
                 <button
                     onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                     disabled={currentPage === totalPages}
                     className="px-3 py-1 border rounded-md text-sm disabled:opacity-50"
                 >
-                    Next
+                    {t('transactionTable.next')}
                 </button>
             </div>
         </nav>

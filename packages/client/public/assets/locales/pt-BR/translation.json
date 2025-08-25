@@ -1,0 +1,108 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "add": "Adicionar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "reset": "Resetar",
+    "all": "Todos",
+    "income": "Receita",
+    "expense": "Despesa",
+    "category": "Categoria",
+    "categories": "Categorias",
+    "account": "Conta",
+    "accounts": "Contas",
+    "date": "Data",
+    "description": "Descrição",
+    "amount": "Valor",
+    "actions": "Ações"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "transactions": "Transações",
+    "import": "Importar",
+    "settings": "Configurações"
+  },
+  "dataInput": {
+    "title": "Bem-vindo ao Gerenciador Financeiro com IA",
+    "subtitle": "Comece conectando-se ao banco de dados ou importando seus dados de transações de um arquivo.",
+    "connectTab": "Conectar ao Banco de Dados",
+    "importTab": "Importar Arquivo",
+    "connectTitle": "Conecte e Gerencie Seus Dados",
+    "connectSubtitle": "Carregue dados do banco de dados para habilitar operações CRUD completas e análise interativa.",
+    "connecting": "Conectando...",
+    "connectButton": "Conectar e Buscar Transações",
+    "uploadTitle": "Clique para enviar",
+    "uploadSubtitle": "ou arraste e solte",
+    "uploadHint": "Arquivo CSV ou XLSX",
+    "processing": "Processando arquivo..."
+  },
+  "dashboard": {
+    "title": "Visão Geral Financeira",
+    "analysisFor": "Análise para:",
+    "filterByAccount": "Filtrar por Conta",
+    "totalIncome": "Receita Total",
+    "totalExpenses": "Despesas Totais",
+    "netSavings": "Economia Líquida",
+    "aiTitle": "Analista Financeiro de IA",
+    "aiLoading": "O Gemini está analisando seus dados...",
+    "aiError": "Não foi possível gerar o resumo da IA.",
+    "incomeAnalysis": "Análise de Receitas",
+    "expenseAnalysis": "Análise de Despesas",
+    "actionableInsights": "Insights Acionáveis",
+    "monthlyChartTitle": "Receitas vs. Despesas Mensais",
+    "categoryChartTitle": "Categorias de Despesas",
+    "transactionsTitle": "Todas as Transações"
+  },
+  "transactionsPage": {
+    "title": "Transações",
+    "subtitle": "Gerencie e revise todas as suas transações financeiras.",
+    "addTransaction": "Adicionar Transação",
+    "searchPlaceholder": "ex: Cafeteria...",
+    "searchLabel": "Buscar Descrição",
+    "typeLabel": "Tipo",
+    "resetFilters": "Resetar Filtros",
+    "startDate": "Data Inicial",
+    "endDate": "Data Final",
+    "filteredSummary": "Resumo Filtrado"
+  },
+  "importPage": {
+    "title": "Revisar e Importar Transações",
+    "subtitle": "Selecione, edite e confirme as transações antes de salvar no banco de dados.",
+    "saving": "Salvando...",
+    "saveButton": "Salvar Selecionadas ({{count}}) no Banco de Dados",
+    "stagedTitle": "Transações em Espera ({{count}})",
+    "addTransaction": "Adicionar Transação"
+  },
+  "settingsPage": {
+    "title": "Configurações",
+    "subtitle": "Gerencie suas categorias de transação e contas."
+  },
+  "settingsList": {
+    "addPlaceholder": "Adicionar nova {{itemName}}...",
+    "add": "Adicionar",
+    "errorExists": "Esta {{itemName}} já existe.",
+    "deleteConfirm": "Tem certeza que deseja excluir esta {{itemName}}? Isso pode afetar transações existentes.",
+    "noItems": "Nenhuma {{itemName}} encontrada."
+  },
+  "transactionModal": {
+    "titleEdit": "Editar Transação",
+    "titleAdd": "Adicionar Transação",
+    "errorAmount": "O valor deve ser um número válido.",
+    "errorDescription": "A descrição é obrigatória.",
+    "errorDate": "A data é obrigatória.",
+    "errorCategory": "A categoria é obrigatória.",
+    "errorAccount": "A conta é obrigatória.",
+    "amountHint": "Use um valor negativo para despesas (ex: -50,25).",
+    "saveButton": "Salvar Transação"
+  },
+  "transactionTable": {
+    "noTransactions": "Nenhuma transação encontrada.",
+    "pagination": "Mostrando {{start}} a {{end}} de {{total}} resultados",
+    "previous": "Anterior",
+    "next": "Próximo"
+  }
+}

@@ -1,6 +1,7 @@
 
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
-import { useQuery, useMutation, useLazyQuery } from '@apollo/client';
+import { useQuery, useMutation, useLazyQuery } from '@apollo/client/react';
+import { useTranslation } from 'react-i18next';
 import type { FinancialAnalysis, AiSummary, Transaction } from './types';
 import { DataInput } from './components/DataInput';
 import { Dashboard } from './components/Dashboard';
@@ -8,6 +9,7 @@ import { TransactionsPage } from './pages/TransactionsPage';
 import { ImportPage } from './pages/ImportPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { TransactionModal } from './components/TransactionModal';
+import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { parseFile } from './utils/fileParser';
 import { analyzeTransactions } from './utils/dataAnalyzer';
 import { DatabaseIcon, HeaderIcon, ImportIcon, SettingsIcon } from './components/Icons';
@@ -22,6 +24,7 @@ import {
 type Page = 'input' | 'dashboard' | 'transactions' | 'import' | 'settings';
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
   const [stagedTransactions, setStagedTransactions] = useState<Transaction[]>([]);
   
   const [selectedDbAccount, setSelectedDbAccount] = useState<string>('All Accounts');
@@ -197,20 +200,24 @@ const App: React.FC = () => {
   const categoryHandlers = createSettingHandler(addCategory, updateCategory, deleteCategory);
   const accountHandlers = createSettingHandler(addAccount, updateAccount, deleteAccount);
 
-  const financialAnalysis = useMemo<FinancialAnalysis | null>(() => {
-    if (allTransactions.length === 0) return null;
-    const filteredTransactions = selectedDbAccount === 'All Accounts'
+  const filteredTransactionsForDashboard = useMemo<Transaction[]>(() => {
+    if (allTransactions.length === 0) return [];
+    return selectedDbAccount === 'All Accounts'
       ? allTransactions
       : allTransactions.filter(t => t.account?.name === selectedDbAccount);
+  }, [allTransactions, selectedDbAccount]);
+
+  const financialAnalysis = useMemo<FinancialAnalysis | null>(() => {
+    if (filteredTransactionsForDashboard.length === 0) return null;
     
     // Map transactions for analysis, as it expects string names
-    const mappedForAnalysis = filteredTransactions.map(t => ({
+    const mappedForAnalysis = filteredTransactionsForDashboard.map(t => ({
       ...t,
       account: t.account?.name,
       category: t.category?.name
     }));
     return analyzeTransactions(mappedForAnalysis);
-  }, [allTransactions, selectedDbAccount]);
+  }, [filteredTransactionsForDashboard]);
   
   const dbAccounts = useMemo(() => ['All Accounts', ...accounts.map(a => a.name)], [accounts]);
 
@@ -219,6 +226,7 @@ const App: React.FC = () => {
       case 'dashboard':
         return <Dashboard 
           analysis={financialAnalysis} 
+          transactions={filteredTransactionsForDashboard}
           aiSummary={aiSummaryData?.aiSummary}
           isLoading={isLoading}
           isAiLoading={isAiLoading}
@@ -283,15 +291,16 @@ const App: React.FC = () => {
             <h1 className="text-sm font-bold text-center text-primary">Fin-AI</h1>
         </div>
         <nav className="flex flex-col items-center space-y-4">
-             <NavButton page="dashboard" label="Dashboard" icon={<DatabaseIcon className="w-5 h-5"/>}/>
-             <NavButton page="transactions" label="Transactions" icon={<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>}/>
-             <NavButton page="import" label="Import" icon={<ImportIcon/>}/>
-             <NavButton page="settings" label="Settings" icon={<SettingsIcon/>}/>
+             <NavButton page="dashboard" label={t('nav.dashboard')} icon={<DatabaseIcon className="w-5 h-5"/>}/>
+             <NavButton page="transactions" label={t('nav.transactions')} icon={<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>}/>
+             <NavButton page="import" label={t('nav.import')} icon={<ImportIcon/>}/>
+             <NavButton page="settings" label={t('nav.settings')} icon={<SettingsIcon/>}/>
         </nav>
-        <div className="mt-auto">
+        <div className="mt-auto flex flex-col items-center gap-4">
+            <LanguageSwitcher />
             <button onClick={handleReset} className="text-gray-400 hover:text-danger text-xs flex flex-col items-center gap-1">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-                Reset
+                {t('common.reset')}
             </button>
         </div>
       </aside>
@@ -300,7 +309,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto">
             {error && (
                 <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6" role="alert">
-                    <p className="font-bold">Error</p>
+                    <p className="font-bold">{t('common.error')}</p>
                     <p>{error}</p>
                 </div>
             )}
